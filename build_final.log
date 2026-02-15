@@ -1,0 +1,87 @@
+
+> neurotechx-website@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.0
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/19) ...
+   Generating static pages (4/19) 
+   Generating static pages (9/19) 
+   Generating static pages (14/19) 
+Error fetching feed INCF: Error: Status code 404
+    at ClientRequest.<anonymous> (/home/mhough/dev/neurotechx/neurotechx-website/.next/server/app/blog/page.js:1:11718)
+    at Object.onceWrapper (node:events:632:26)
+    at ClientRequest.emit (node:events:517:28)
+    at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:700:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:541:22)
+    at TLSSocket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+Error fetching feed INCF: Error: Status code 404
+    at ClientRequest.<anonymous> (/home/mhough/dev/neurotechx/neurotechx-website/.next/server/app/blog/page.js:1:11718)
+    at Object.onceWrapper (node:events:632:26)
+    at ClientRequest.emit (node:events:517:28)
+    at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:700:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:541:22)
+    at TLSSocket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+Error fetching feed NITRC: Error: Status code 404
+    at ClientRequest.<anonymous> (/home/mhough/dev/neurotechx/neurotechx-website/.next/server/app/blog/page.js:1:11718)
+    at Object.onceWrapper (node:events:632:26)
+    at ClientRequest.emit (node:events:517:28)
+    at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:700:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:541:22)
+    at TLSSocket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+Error fetching feed NITRC: Error: Status code 404
+    at ClientRequest.<anonymous> (/home/mhough/dev/neurotechx/neurotechx-website/.next/server/app/blog/page.js:1:11718)
+    at Object.onceWrapper (node:events:632:26)
+    at ClientRequest.emit (node:events:517:28)
+    at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:700:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)
+    at TLSSocket.socketOnData (node:_http_client:541:22)
+    at TLSSocket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+ ✓ Generating static pages (19/19)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    694 B          94.4 kB
+├ ○ /_not-found                          875 B          87.8 kB
+├ ○ /about                               398 B          87.3 kB
+├ ○ /blog                                170 B          87.1 kB
+├ ○ /community                           170 B          87.1 kB
+├ ○ /community/chapter-guidelines        170 B          87.1 kB
+├ ○ /community/growth                    170 B          87.1 kB
+├ ○ /content-lab                         170 B          87.1 kB
+├ ○ /donate                              170 B          87.1 kB
+├ ○ /education                           169 B          87.1 kB
+├ ○ /education/getting-started           169 B          87.1 kB
+├ ○ /education/resources                 170 B          87.1 kB
+├ ○ /founders                            169 B          87.1 kB
+├ ○ /jobs                                170 B          87.1 kB
+├ ○ /students                            510 B          87.4 kB
+└ ○ /transparency                        170 B          87.1 kB
++ First Load JS shared by all            86.9 kB
+  ├ chunks/23-c9fd11bd7f38ece4.js        31.4 kB
+  ├ chunks/fd9d1056-2821b0f0cabcd8bd.js  53.7 kB
+  └ other shared chunks (total)          1.87 kB
+
+
+○  (Static)  prerendered as static content
+
