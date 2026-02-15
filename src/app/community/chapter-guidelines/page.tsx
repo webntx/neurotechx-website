@@ -1,13 +1,19 @@
-import DockitRenderer from '@/components/DockitRenderer';
-import { getDockitData } from '@/lib/dockit';
+import { DockitRenderer } from '@/components/DockitRenderer';
+import { getDockitContent } from '@/lib/dockit';
+import { notFound } from 'next/navigation';
 
 async function getPageData() {
-  // The filename needs to match one of the files in the dockit-repo
-  // https://github.com/neurotechx/dockit-repo
-  return getDockitData('chapter-guidelines.rst');
+  const content = getDockitContent('chapter-guidelines');
+  if (!content) {
+    return null;
+  }
+  return content;
 }
 
 export default async function Page() {
-  const { html, title } = await getPageData();
-  return <DockitRenderer html={html} title={title} />;
+  const content = await getPageData();
+  if (!content) {
+    notFound();
+  }
+  return <DockitRenderer content={content} />;
 }
