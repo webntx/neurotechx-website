@@ -93,27 +93,13 @@ export default function Home() {
                   backgroundSize: '24px 24px'
                 }} />
 
-                {/* MOABB Logo Placeholder */}
-                <div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <div style={{
-                    fontSize: '3rem',
-                    fontWeight: 900,
-                    letterSpacing: '-0.05em',
-                    background: 'linear-gradient(to right, #2dd4bf, #06b6d4)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                  }}>
-                    MOABB
-                  </div>
-                  <div style={{
-                    fontSize: '0.75rem',
-                    fontFamily: 'monospace',
-                    color: 'rgba(20, 184, 166, 0.8)',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase'
-                  }}>
-                    Mother of All BCI Benchmarks
-                  </div>
+                {/* MOABB Logo */}
+                <div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', padding: '0 3rem' }}>
+                  <img
+                    src="/images/moabb-logo.svg"
+                    alt="MOABB Logo"
+                    style={{ width: '100%', height: 'auto', maxWidth: '240px' }}
+                  />
                 </div>
               </div>
               <div className={styles.cardContent}>
