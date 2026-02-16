@@ -533,8 +533,22 @@ export default function EducationPage() {
 
             {/* Community & Media Partners */}
             <div className="mt-16 mb-16">
-                <h2 className="text-2xl font-bold mb-6">Community & Media Partners</h2>
-                <div className="grid md:grid-cols-2 gap-8">
+                <h2 className="text-2xl font-bold mb-6">Partners & Research Hubs</h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                    <div className="card p-6 border-l-4 border-neuro-accent flex flex-col justify-between">
+                        <div>
+                            <a href="https://braininstitute.ca/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
+                                Ontario Brain Institute <ExternalLink className="w-4 h-4" />
+                            </a>
+                            <p className="text-sm text-foreground/80 mb-4">
+                                Accelerating neuroscience discovery and innovation. Home to the <strong>Brain-CODE</strong> open data platform and neurotech entrepreneurship programs.
+                            </p>
+                        </div>
+                        <div className="flex gap-2">
+                            <span className="text-xs bg-muted px-2 py-1 rounded">Research Hub</span>
+                            <span className="text-xs bg-muted px-2 py-1 rounded">Open Data</span>
+                        </div>
+                    </div>
                     <div className="card p-6 border-l-4 border-neuro-accent flex flex-col justify-between">
                         <div>
                             <a href="https://www.bciguys.com/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
