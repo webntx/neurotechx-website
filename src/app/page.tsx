@@ -207,7 +207,7 @@ export default function Home() {
                 <p className={styles.cardDescription}>
                   Explore advancements in focused ultrasound with host Charles Caskey.
                 </p>
-                <a href="https://podcasts.apple.com/us/podcast/fus-forward/id1612660888" target="_blank" className={styles.cardLink}>
+                <a href="https://podcasts.apple.com/us/podcast/fus-forward/id1857021050" target="_blank" className={styles.cardLink}>
                   Listen Now <ArrowRight width={16} height={16} />
                 </a>
               </div>
