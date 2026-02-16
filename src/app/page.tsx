@@ -130,29 +130,33 @@ export default function Home() {
             {/* Row 2, Col 2: Top Medium Article */}
             <div className={styles.card}>
               <div className={`${styles.cardVisual} ${styles.article}`}>
-                {/* CSS Abstract Pattern instead of Stock Photo */}
+                {/* Publication Style Background */}
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  opacity: 0.1,
-                  backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000)',
+                  backgroundColor: '#ffffff',
+                  backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
                   backgroundSize: '20px 20px',
-                  backgroundPosition: '0 0, 10px 10px'
+                  opacity: 0.5
                 }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--background), transparent)' }} />
-
-                <div style={{ position: 'relative', zIndex: 10, padding: '0 2rem' }}>
-                  <span style={{
-                    backgroundColor: 'black',
-                    color: 'white',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    padding: '0.25rem 0.5rem',
+                
+                <div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', padding: '0 2rem' }}>
+                   <img 
+                    src="/images/logo-black.svg" 
+                    alt="NeuroTechX Content Lab" 
+                    style={{ width: '80%', height: 'auto', marginBottom: '1rem' }} 
+                  />
+                  <div style={{ 
+                    fontSize: '0.875rem', 
+                    fontWeight: 800, 
+                    color: '#000', 
+                    letterSpacing: '0.1em', 
                     textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    display: 'inline-block',
-                    marginBottom: '0.5rem'
-                  }}>Featured Story</span>
+                    borderTop: '2px solid #000',
+                    paddingTop: '0.5rem'
+                  }}>
+                    Content Lab
+                  </div>
                 </div>
               </div>
               <div className={styles.cardContent}>
