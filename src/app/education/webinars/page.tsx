@@ -22,7 +22,14 @@ const COMPANY_CHANNEL_IDS = [
     'UClXO1ZPnR_x2DzSnDBgjJ4w', // Emotiv
     'UCBds3B6R3zHUKlDtqXnCABA', // Neurable
     'UCXts-j3mtasjgvPl__2P6zA', // Paradromics
-    'UCnPqWoBCGyRL80bTOCZN5AQ'  // Precision Neuroscience
+    'UCnPqWoBCGyRL80bTOCZN5AQ', // Precision Neuroscience
+    'UCKaffupDA8KKrDE0rd668Xw',
+    'UCWao4UCMenzvHOHdx_KImBg',
+    'UCVR80bpCIQyWgyGa20OLmvw',
+    'UCLt4d8cACHzrVvAz9gtaARA',
+    'UCkVxeTv9Q3Hw2I3Us3U8_Bg',
+    'UCAod4c7tYIiDY1o_F2sOCiw',
+    'UCMIYoORlCnvo9bahMCPF0PQ'
 ];
 
 export default async function WebinarsPage() {
