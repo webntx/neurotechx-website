@@ -1,37 +1,15 @@
-import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import styles from './page.module.css';
-import { getDockitContent } from '@/lib/dockit';
-import { DockitRenderer } from '@/components/DockitRenderer';
 
 export default function AboutPage() {
-    const dockitContent = getDockitContent('about');
-
     return (
         <div className={styles.container}>
             <section className={styles.section}>
-                <h1 className={styles.title}>About NeuroTechX</h1>
-                <p className={styles.subtitle}>
-                    NeuroTechX is a non-profit organization whose mission is to facilitate the advancement of neurotechnology by providing key resources and learning opportunities, and by being leaders in local and worldwide technological initiatives.
+                <h1 className={styles.title}>Our Origins</h1>
+                <p className="text-center max-w-2xl mx-auto mb-12 text-lg text-muted-foreground">
+                    NeuroTechX stands on the shoulders of giants. We acknowledge the <a href="https://alexandre.barachant.org/" target="_blank" className="text-neuro-accent hover:underline font-bold">founders and intellectual sources</a> whose open-source contributions laid the technical foundation for our global community.
                 </p>
-                <p className={styles.pillars}>
-                    Our 3 pillars are “Community”, “Education”, and “Professional Development”.
-                </p>
-            </section>
-
-            {dockitContent && (
-                <section className={styles.section}>
-                    <DockitRenderer content={dockitContent} />
-                </section>
-            )}
-
-            <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>Our Origins</h2>
-                <p className="text-center max-w-2xl mx-auto mb-8 text-muted-foreground">
-                    NeuroTechX stands on the shoulders of giants. We acknowledge the <a href="https://alexandre.barachant.org/" target="_blank" className="text-neuro-accent hover:underline font-bold">founders and intellectual sources</a> whose open-source contributions (like <em>muse-lsl</em> and <em>pyriemann</em>) laid the technical foundation for our community.
-                    <br /><br />
-                    For a deeper dive, explore the <a href="https://neurotech-course.github.io/neurotech_history/" target="_blank" className="text-neuro-accent hover:underline font-bold">Neurotech History Timeline</a>.
-                </p>
+                
                 <div className={styles.originsGrid}>
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Paris: CogLab</h3>
