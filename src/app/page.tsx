@@ -166,9 +166,9 @@ export default function Home() {
                 <p className={styles.cardDescription}>
                   A deep dive into the emerging trends, funding landscapes, and breakthrough technologies defining the decade.
                 </p>
-                <Link href="/blog" className={styles.cardLink}>
+                <a href="https://medium.com/neurotechx" target="_blank" className={styles.cardLink}>
                   Read Article <ArrowRight width={16} height={16} />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -341,13 +341,14 @@ export default function Home() {
           <p style={{ fontSize: '1.25rem', color: 'var(--muted-foreground)', maxWidth: '42rem', margin: '0 auto 2.5rem' }}>
             Catch up on the latest news from around the world, curated by our community and automated streams.
           </p>
-          <Link
-            href="/blog"
+          <a
+            href="https://medium.com/neurotechx"
+            target="_blank"
             className={styles.buttonPrimary}
             style={{ backgroundColor: 'var(--foreground)', color: 'var(--background)' }}
           >
             Read the Blog
-          </Link>
+          </a>
         </div>
       </section>
     </div>
