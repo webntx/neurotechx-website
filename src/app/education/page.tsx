@@ -1,4 +1,5 @@
 import { BookOpen, GraduationCap, Users, Video, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 export default function EducationPage() {
     return (
@@ -588,10 +589,10 @@ export default function EducationPage() {
                         <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">NeuroTech 101</h3>
                         <p className="text-sm text-muted-foreground">Foundational concepts and tutorials.</p>
                     </a>
-                    <a href="https://www.youtube.com/playlist?list=PLQ-_L3_D0_T0d_Q_Q_Q_Q_Q_" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
+                    <Link href="/education/webinars" className="card p-6 block hover:border-neuro-accent transition-colors group">
                         <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">Webinar Series</h3>
                         <p className="text-sm text-muted-foreground">Deep dives with industry experts.</p>
-                    </a>
+                    </Link>
                     <a href="https://www.youtube.com/neurotechx" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group bg-muted/50">
                         <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">Browse All Videos</h3>
                         <p className="text-sm text-muted-foreground">Explore our full library on YouTube.</p>

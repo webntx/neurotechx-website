@@ -224,9 +224,9 @@ export default function Home() {
                 <p className={styles.cardDescription}>
                   Technical workshops from g.tec, Interaxon (Muse), Neuroelectrics, BEL, ANT Neuro, Magstim EGI, NIRx, and others.
                 </p>
-                <a href="https://www.youtube.com/neurotechx" target="_blank" className={styles.cardLink}>
+                <Link href="/education/webinars" className={styles.cardLink}>
                   Watch Archive <ArrowRight width={16} height={16} />
-                </a>
+                </Link>
               </div>
             </div>
 
