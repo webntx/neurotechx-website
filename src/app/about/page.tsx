@@ -95,6 +95,60 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Board of Directors</h2>
+                <div className={styles.originsGrid}>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Morgan Hough</h3>
+                        <span className={styles.cardLabel}>Director</span>
+                        <p className={styles.cardText}>
+                            A specialist in Clinical Neurology (Oxford) and Biophysics (Reed), Morgan has a background spanning AI, medical imaging, and software engineering management. He is a co-founder of NeuroFedora and has been instrumental in bridging scientific research with open-source development.
+                        </p>
+                    </div>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>John Griffiths, PhD</h3>
+                        <span className={styles.cardLabel}>Director</span>
+                        <p className={styles.cardText}>
+                            Assistant Professor at the University of Toronto and Independent Scientist at the Krembil Centre for Neuroinformatics. John specializes in mathematical modeling of large-scale brain dynamics and multimodal neuroimaging data analysis.
+                        </p>
+                    </div>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Susan Boehnke, PhD</h3>
+                        <span className={styles.cardLabel}>Director</span>
+                        <p className={styles.cardText}>
+                            Associate Professor at Queen&apos;s University and Director of the NeuroTech Micro-credential Program. Susan&apos;s research focuses on sensory processing and neurodegenerative diseases, and she is a leader in neurotechnology ethics and education.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Officers & Leadership</h2>
+                <div className={styles.originsGrid}>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Han Cat Nguyen</h3>
+                        <span className={styles.cardLabel}>Officer</span>
+                        <p className={styles.cardText}>
+                            A biomedical engineer with expertise in biosensor design, firmware development, and brain-computer interfaces. Han has contributed significantly to research on intraoral electrooculogram monitoring and DIY neurotechnology hardware.
+                        </p>
+                    </div>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Dhruv Mehrotra</h3>
+                        <span className={styles.cardLabel}>Officer</span>
+                        <p className={styles.cardText}>
+                            A neuroscience researcher and developer of Pynapple, a popular open-source toolbox for neuroscience data analysis. Dhruv&apos;s work focuses on the dynamics of spontaneous brain activity and adaptive decision-making.
+                        </p>
+                    </div>
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Sophie Valentine</h3>
+                        <span className={styles.cardLabel}>Content Laboratory Lead</span>
+                        <p className={styles.cardText}>
+                            Leading the NTX Content Laboratory, Sophie brings a background in experimental psychology and cognitive neuroscience. She is an expert in digital health product innovation and a champion for diversity and inclusion in neurotechnology.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
