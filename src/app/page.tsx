@@ -46,29 +46,16 @@ export default function Home() {
             {/* Row 1, Col 1: The Book */}
             <div className={styles.card}>
               <div className={`${styles.cardVisual} ${styles.book}`}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom right, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.2))' }} />
-
-                {/* Book Placeholder Visualization */}
                 <div style={{
-                  position: 'relative',
-                  width: '8rem',
-                  height: '12rem',
-                  backgroundColor: '#172554', /* blue-950 */
-                  borderTopRightRadius: '0.375rem',
-                  borderBottomRightRadius: '0.375rem',
-                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                  borderLeft: '12px solid #1e3a8a', /* blue-900 */
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                  padding: '0.5rem',
-                  color: 'white'
-                }}>
-                  <span style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: '1.125rem', lineHeight: 1.25 }}>The<br />NeuroTech<br />Primer</span>
-                  <div style={{ marginTop: '1rem', width: '2rem', height: '2rem', borderRadius: '9999px', backgroundColor: 'rgba(255,255,255,0.1)' }} />
-                </div>
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundImage: "url('/images/neurotech-primer.png')",
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundColor: '#172554'
+                }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.4), transparent)' }} />
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>The NeuroTech Primer</h3>
