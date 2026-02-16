@@ -201,10 +201,15 @@ export default function Home() {
             {/* Row 2, Col 4: FUS Forward Podcast */}
             <div className={styles.card}>
               <div className={`${styles.cardVisual} ${styles.podcast}`}>
-                <div style={{ position: 'absolute', inset: 0, background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(56, 189, 248, 0.1) 2px, rgba(56, 189, 248, 0.1) 4px)' }} />
-                <div style={{ width: '5rem', height: '5rem', borderRadius: '50%', border: '4px solid #38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 20px rgba(56, 189, 248, 0.4)' }}>
-                  <div style={{ width: '1.5rem', height: '1.5rem', backgroundColor: '#38bdf8', borderRadius: '50%' }} />
-                </div>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundImage: "url('/images/fus-forward-logo.jpg')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.8
+                }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent)' }} />
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>FUS Forward</h3>
