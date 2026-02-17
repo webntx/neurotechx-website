@@ -51,22 +51,22 @@ export default async function WebinarsPage() {
 
             <section className="mb-16">
                 <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 border-b pb-2">
-                    <Play className="text-neuro-accent" size={24} /> NeuroTechX Webinar Series
+                    <Building2 className="text-neuro-accent" size={24} /> Latest from Industry Partners
                 </h2>
                 <div className={styles.grid}>
-                    {webinarVideos.map((video) => (
-                        <VideoCard key={video.id} video={video} />
+                    {companyVideos.map((video) => (
+                        <VideoCard key={`${video.id}-${video.channelTitle}`} video={video} />
                     ))}
                 </div>
             </section>
 
             <section>
                 <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 border-b pb-2">
-                    <Building2 className="text-neuro-accent" size={24} /> Latest from Industry Partners
+                    <Play className="text-neuro-accent" size={24} /> NeuroTechX Webinar Series
                 </h2>
                 <div className={styles.grid}>
-                    {companyVideos.map((video) => (
-                        <VideoCard key={`${video.id}-${video.channelTitle}`} video={video} />
+                    {webinarVideos.map((video) => (
+                        <VideoCard key={video.id} video={video} />
                     ))}
                 </div>
             </section>
