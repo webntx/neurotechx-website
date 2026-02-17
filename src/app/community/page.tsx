@@ -144,7 +144,7 @@ export default function CommunityPage() {
                     <p className="mb-4 text-muted-foreground">
                         Catch up on previous editions of our weekly digest and monthly newsletters.
                     </p>
-                    <a href="https://neurotechx.com/stay-tuned/" target="_blank" className="inline-flex items-center gap-2 text-neuro-accent hover:underline font-bold">
+                    <a href="/newsletter" className="inline-flex items-center gap-2 text-neuro-accent hover:underline font-bold">
                         Browse Full Archive <ExternalLink className="w-4 h-4" />
                     </a>
                 </div>

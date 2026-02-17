@@ -255,7 +255,7 @@ export default async function Sidebar() {
                     </button>
                 </div>
                 <div className="mt-3 text-center">
-                    <a href="https://neurotechx.com/stay-tuned/" target="_blank" className="text-xs text-neuro-accent hover:underline flex items-center justify-center gap-1">
+                    <a href="/newsletter" className="text-xs text-neuro-accent hover:underline flex items-center justify-center gap-1">
                         View Past Issues <ExternalLink className="w-3 h-3" />
                     </a>
                 </div>
