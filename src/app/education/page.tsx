@@ -25,9 +25,12 @@ export default function EducationPage() {
                         </a>
                     </div>
                 </div>
-                {/* Visual placeholder for book cover */}
-                <div className="w-32 h-44 bg-foreground/5 rounded shadow-lg flex items-center justify-center text-center p-2 text-xs text-muted-foreground shrink-0 rotate-3">
-                    [Book Cover Art]
+                <div className="w-48 h-auto shrink-0 rotate-3 transition-transform hover:rotate-0 duration-500">
+                    <img 
+                        src="/images/neurotech-primer.png" 
+                        alt="The NeuroTech Primer Cover" 
+                        className="w-full h-full object-contain rounded shadow-2xl border border-foreground/5"
+                    />
                 </div>
             </div>
 
