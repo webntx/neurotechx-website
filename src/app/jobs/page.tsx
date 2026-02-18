@@ -79,6 +79,20 @@ const FEATURED_JOBS = [
         location: 'San Francisco, CA',
         description: 'Building the software foundation for high-performance, wearable neural interface systems.',
         link: 'https://www.axionclick.com/careers'
+    },
+    {
+        company: 'BrainsWay',
+        role: 'Field Clinical Engineer',
+        location: 'Remote / Various',
+        description: 'Supporting the deployment and clinical application of Deep TMS (Transcranial Magnetic Stimulation) systems.',
+        link: 'https://www.brainsway.com/about-brainsway/careers/'
+    },
+    {
+        company: 'BrainsWay',
+        role: 'Clinical Program Manager - TMS',
+        location: 'Remote / Various',
+        description: 'Leading clinical program initiatives for non-invasive neurostimulation treatments.',
+        link: 'https://www.brainsway.com/about-brainsway/careers/'
     }
 ];
 
