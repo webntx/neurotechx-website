@@ -9,7 +9,7 @@ export default function AboutPage() {
             <div className={styles.instagramGrid}>
                 <a href="https://www.instagram.com/p/DB_9Z_TSZ_S/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
                     <InstagramImage 
-                        src="https://placehold.co/600x600/1a1a1a/22d3ee?text=Buzz-O-Meter" 
+                        src="/images/about-instagram-1.png" 
                         alt="NeuroTechX Event 1" 
                         className={styles.instagramImage} 
                         fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+1"
@@ -20,7 +20,7 @@ export default function AboutPage() {
                 </a>
                 <a href="https://www.instagram.com/p/C_id_mOS_ST/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
                     <InstagramImage 
-                        src="https://placehold.co/600x600/1a1a1a/22d3ee?text=Global+Hackathon" 
+                        src="/images/about-instagram-2.png" 
                         alt="NeuroTechX Event 2" 
                         className={styles.instagramImage} 
                         fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+2"
