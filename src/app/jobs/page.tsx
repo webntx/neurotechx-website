@@ -100,6 +100,20 @@ const FEATURED_JOBS = [
         location: 'Boston, MA / Remote',
         description: 'Analyzing clinical trial data and translating complex neural data into insights for drug development programs.',
         link: 'https://job-boards.greenhouse.io/beaconbiosignals/jobs/4110972009'
+    },
+    {
+        company: 'Alto Neuroscience',
+        role: 'Sr. Director Clinical Development / Program Leader',
+        location: 'Remote (US)',
+        description: 'Leading clinical development strategy and program execution for precision psychiatry initiatives.',
+        link: 'https://altoneuroscience.com/careers/'
+    },
+    {
+        company: 'Alto Neuroscience',
+        role: 'Clinical Research Associate',
+        location: 'Remote (US)',
+        description: 'Supporting the monitoring and execution of clinical trials for innovative CNS therapeutics.',
+        link: 'https://altoneuroscience.com/careers/'
     }
 ];
 
