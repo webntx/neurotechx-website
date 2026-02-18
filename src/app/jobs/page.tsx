@@ -51,6 +51,20 @@ const FEATURED_JOBS = [
         location: 'Palo Alto, CA',
         description: 'Developing high-performance user interfaces and end-to-end features for medical technology.',
         link: 'https://www.ampahealth.com/careers'
+    },
+    {
+        company: 'Merge',
+        role: 'ML Research Scientist - Bayesian Optimization',
+        location: 'San Francisco, CA',
+        description: 'Bridging biological and artificial intelligence to maximize human ability through BCI development.',
+        link: 'https://www.merge.io/careers'
+    },
+    {
+        company: 'Merge',
+        role: 'MLE / MLOps / Full-stack DL Engineer',
+        location: 'San Francisco, CA',
+        description: 'Building the infrastructure and pipelines for foundation models of intelligence and neural interfaces.',
+        link: 'https://www.merge.io/careers'
     }
 ];
 
