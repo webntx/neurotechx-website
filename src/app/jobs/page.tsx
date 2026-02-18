@@ -1,5 +1,5 @@
 import LandingPageLayout from '@/components/LandingPageLayout';
-import { ExternalLink, Building2, MapPin, DollarSign } from 'lucide-react';
+import { ExternalLink, Building2, MapPin, DollarSign, ArrowRight } from 'lucide-react';
 
 const FEATURED_JOBS = [
     {
@@ -57,8 +57,8 @@ const FEATURED_JOBS = [
 export default function JobsPage() {
     return (
         <LandingPageLayout
-            title="NeuroTech Futures"
-            subtitle="The premier portal for careers in neurotechnology and brain-computer interfaces."
+            title="NeuroTech Jobs"
+            subtitle="Explore high-impact roles at the frontier of brain-computer interfaces and neural engineering."
             ctaText="Post a Job"
             ctaLink="https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform"
         >
@@ -108,28 +108,35 @@ export default function JobsPage() {
                 </div>
             </section>
 
-            <div className="grid md:grid-cols-2 gap-8 mt-16">
-                <div className="card p-8 bg-muted/30 border-dashed">
-                    <h3 className="text-2xl font-serif font-bold mb-4">For Job Seekers</h3>
-                    <p className="text-muted-foreground mb-6">
-                        Looking for more? Check out our dedicated job board at <a href="https://neurotechjobs.io" target="_blank" className="text-neuro-accent hover:underline">NeuroTech Futures</a>.
+            {/* NeuroTech Futures Section - Moved Down */}
+            <section className="mt-20 p-8 rounded-2xl bg-neuro-accent/5 border-2 border-neuro-accent/20">
+                <div className="max-w-3xl">
+                    <h2 className="text-3xl font-serif font-bold mb-4">NeuroTech Futures</h2>
+                    <p className="text-xl text-muted-foreground mb-8">
+                        The premier job board for careers in neurotechnology. Find roles in clinical research, software engineering, and hardware development at top neurotech companies worldwide.
                     </p>
-                    <a href="https://neurotechjobs.io" target="_blank" className="font-bold flex items-center gap-2 hover:text-neuro-accent">
-                        Browse all jobs <ExternalLink className="w-4 h-4" />
-                    </a>
+                    <div className="flex flex-wrap gap-4">
+                        <a 
+                            href="https://neurotechjobs.io" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center gap-2 px-8 py-3 bg-neuro-accent text-black rounded-full font-bold hover:brightness-110 transition-all"
+                        >
+                            Browse All Roles <ArrowRight className="w-5 h-5" />
+                        </a>
+                        <a 
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center gap-2 px-8 py-3 border border-foreground/20 rounded-full font-bold hover:bg-muted/50 transition-all"
+                        >
+                            Post a Job
+                        </a>
+                    </div>
                 </div>
-                <div className="card p-8 bg-muted/30 border-dashed">
-                    <h3 className="text-2xl font-serif font-bold mb-4">For Employers</h3>
-                    <p className="text-muted-foreground mb-6">
-                        Reach thousands of researchers, engineers, and clinical experts by posting your open roles.
-                    </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform" target="_blank" className="font-bold flex items-center gap-2 hover:text-neuro-accent">
-                        Submit a posting <ExternalLink className="w-4 h-4" />
-                    </a>
-                </div>
-            </div>
+            </section>
 
-            <div className="mt-16">
+            <div className="mt-20">
                 <h3 className="text-2xl font-serif font-bold mb-6">Related Job Boards</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                     <a href="https://bernstein-network.de/en/career/job-pool/" target="_blank" className="card p-4 hover:border-neuro-accent transition-colors flex items-center justify-between group">
