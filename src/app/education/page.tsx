@@ -162,6 +162,20 @@ export default function EducationPage() {
                         </div>
 
                         <div className="card p-6 border-l-4 border-neuro-accent bg-muted/30 mt-6">
+                            <a href="https://missing.csail.mit.edu/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
+                                The Missing Semester (MIT) <ExternalLink className="w-4 h-4" />
+                            </a>
+                            <p className="text-sm text-foreground/80 mb-4">
+                                The Missing Semester of Your Computer Science Education. Master the command line, use a powerful text editor, use fancy features of version control systems, and much more!
+                            </p>
+                            <div className="flex gap-2">
+                                <span className="text-xs bg-background px-2 py-1 rounded border">Shell</span>
+                                <span className="text-xs bg-background px-2 py-1 rounded border">Vim/Git</span>
+                                <span className="text-xs bg-background px-2 py-1 rounded border">Security</span>
+                            </div>
+                        </div>
+
+                        <div className="card p-6 border-l-4 border-neuro-accent bg-muted/30 mt-6">
                             <a href="https://cuttingeeg.org/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
                                 CuttingEEG <ExternalLink className="w-4 h-4" />
                             </a>
