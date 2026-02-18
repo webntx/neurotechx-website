@@ -93,6 +93,13 @@ const FEATURED_JOBS = [
         location: 'Remote / Various',
         description: 'Leading clinical program initiatives for non-invasive neurostimulation treatments.',
         link: 'https://www.brainsway.com/about-brainsway/careers/'
+    },
+    {
+        company: 'Beacon Biosignals',
+        role: 'Neuroscientist, External Scientific Programs',
+        location: 'Boston, MA / Remote',
+        description: 'Analyzing clinical trial data and translating complex neural data into insights for drug development programs.',
+        link: 'https://job-boards.greenhouse.io/beaconbiosignals/jobs/4110972009'
     }
 ];
 
