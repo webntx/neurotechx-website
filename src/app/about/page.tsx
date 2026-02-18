@@ -37,11 +37,8 @@ export default function AboutPage() {
                     NeuroTechX was founded in 2015 by Yannick Roy and a dedicated team of engineers and scientists who recognized a critical gap: the lack of a bridge between the rigorous academic world of neuroscience and the fast-paced, hands-on culture of technology enthusiasts.
                 </p>
                 <div className={styles.cardText}>
-                    <p className="mb-4">
-                        What began as a small group of hackers in Montreal quickly evolved into the largest global community for neurotechnology. Our mission remains centered on three pillars: Community, Education, and Professional Development.
-                    </p>
                     <p>
-                        As the community grew, the need for professional consultancy and advisory services became evident. This led to the formation of <strong>NeuroTechX Services</strong> in 2019, an independent entity designed to support startups, corporations, and investors navigating the neurotech landscape. In August 2024, following a period of significant growth and the expansion of sister entities like Myelin Capital, NeuroTechX and NTX Services mutually agreed to part ways. NTX Services transitioned into a new global consultancy, allowing NeuroTechX to refocus entirely on its non-profit mission of fostering an open, global community.
+                        What began as a small group of hackers in Montreal quickly evolved into the largest global community for neurotechnology. Our mission remains centered on three pillars: Community, Education, and Professional Development. We continue to foster an open, global community dedicated to the advancement of neurotechnology.
                     </p>
                 </div>
             </section>
