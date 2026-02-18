@@ -250,6 +250,30 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Row 2, Col 4: Many Analysts (New) */}
+            <div className={styles.card}>
+              <div className={`${styles.cardVisual} ${styles.manyAnalysts}`}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundImage: "url('/images/many-analysts.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.8
+                }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent)' }} />
+              </div>
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>Many Analysts</h3>
+                <p className={styles.cardDescription}>
+                  A collaborative project investigating how different analysis pipelines affect results in personality neuroscience.
+                </p>
+                <a href="https://www.coscience-personality.com/manyanalysts" target="_blank" className={styles.cardLink}>
+                  Visit Project <ArrowRight width={16} height={16} />
+                </a>
+              </div>
+            </div>
+
             {/* Row 3, Col 1: BALLADEER Dataset (New) */}
             <div className={styles.card} style={{ gridColumn: 'span 2' }}>
               <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
