@@ -37,6 +37,20 @@ const FEATURED_JOBS = [
         location: 'Austin, TX',
         description: 'Creating the next generation of data-rate brain-computer interfaces.',
         link: 'https://paradromics.com/'
+    },
+    {
+        company: 'Ampa Health',
+        role: 'Backend Engineer – APIs & Data Systems',
+        location: 'Palo Alto, CA',
+        description: 'Building scalable backend infrastructure and data systems for healthcare innovation.',
+        link: 'https://www.ampahealth.com/careers'
+    },
+    {
+        company: 'Ampa Health',
+        role: 'Frontend-focused Fullstack Software Engineer',
+        location: 'Palo Alto, CA',
+        description: 'Developing high-performance user interfaces and end-to-end features for medical technology.',
+        link: 'https://www.ampahealth.com/careers'
     }
 ];
 
