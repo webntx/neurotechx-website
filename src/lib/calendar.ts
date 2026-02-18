@@ -47,6 +47,33 @@ export async function fetchCalendarEvents(): Promise<CalendarEvent[]> {
         // Manually inject key NeuroTechX and partner events
         const manualEvents: CalendarEvent[] = [
             {
+                id: 'norcal-mixer-2026',
+                title: 'Norcal Neurotech Mixer (Cal, UCD, UCSC)',
+                start: '2026-02-21T07:00:00.000-08:00',
+                end: '2026-02-21T11:00:00.000-08:00',
+                location: 'Frontier Tower @ Spaceship, San Francisco',
+                url: 'https://lu.ma/neurotechucberkeley-neurotechucsanta-cru',
+                description: 'Open Registration Mixer for Norcal neurotech enthusiasts.'
+            },
+            {
+                id: 'neuro-fireside-2026',
+                title: 'Reactive to Predictive Neurology: Neuro Fireside Series',
+                start: '2026-02-26T19:00:00.000-08:00',
+                end: '2026-02-26T21:00:00.000-08:00',
+                location: 'Frontier Tower @ Spaceship, San Francisco',
+                url: 'https://lu.ma/neuro-fireside-series',
+                description: 'Fireside series on the future of predictive neurology.'
+            },
+            {
+                id: 'global-student-hackathon-2026',
+                title: 'NeuroTechX Global Student Hackathon',
+                start: '2026-04-10T09:00:00.000-07:00',
+                end: '2026-04-12T18:00:00.000-07:00',
+                location: 'Frontier Tower @ Spaceship, San Francisco',
+                url: 'https://lu.ma/neurotechx-global-student-hackathon',
+                description: 'Annual global hackathon for students building the future of neurotechnology.'
+            },
+            {
                 id: 'brain-school-2026',
                 title: 'Brain School 2026: Genes, Brains & Breakthroughs',
                 start: new Date('2026-03-09T17:00:00').toISOString(),
