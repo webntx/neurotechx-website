@@ -54,14 +54,6 @@ export default function AboutPage() {
                 
                 <div className={styles.originsGrid}>
                     <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>NeuroTechX Services</h3>
-                        <span className={styles.cardLabel}>Strategic Milestone (2019 - 2024)</span>
-                        <p className={styles.cardText}>
-                            Launched in 2019, NTX Services provided expert advisory to the neurotech industry. Its successful operation and eventual transition in 2024 marked a pivotal moment, enabling the core NeuroTechX organization to redouble its commitment to community-driven open science.
-                        </p>
-                    </div>
-
-                    <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Paris: CogLab</h3>
                         <span className={styles.cardLabel}>Historical Pillar</span>
                         <p className={styles.cardText}>
@@ -105,6 +97,25 @@ export default function AboutPage() {
                                 eeg-notebooks <ArrowUpRight className={styles.icon} />
                             </a>
                         </div>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>Open Science: MOABB</h3>
+                        <span className={styles.cardLabel}>Technical Milestone</span>
+                        <p className={styles.cardText}>
+                            The <strong>Mother of All BCI Benchmarks (MOABB)</strong> project set a new standard for reproducibility in BCI research, providing a comprehensive framework for dataset benchmarking.
+                        </p>
+                        <a href="https://github.com/NeuroTechX/moabb" target="_blank" className={styles.link}>
+                            View MOABB <ArrowUpRight className={styles.icon} />
+                        </a>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>NeuroTechX Services</h3>
+                        <span className={styles.cardLabel}>Strategic Milestone (2019 - 2024)</span>
+                        <p className={styles.cardText}>
+                            Launched in 2019, NTX Services provided expert advisory to the neurotech industry. Its successful operation and eventual transition in 2024 marked a pivotal moment, enabling the core NeuroTechX organization to redouble its commitment to community-driven open science.
+                        </p>
                     </div>
 
                     <div className={styles.card}>
