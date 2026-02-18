@@ -65,6 +65,20 @@ const FEATURED_JOBS = [
         location: 'San Francisco, CA',
         description: 'Building the infrastructure and pipelines for foundation models of intelligence and neural interfaces.',
         link: 'https://www.merge.io/careers'
+    },
+    {
+        company: 'Axion',
+        role: 'ML Researcher',
+        location: 'San Francisco, CA',
+        description: 'Developing non-invasive neural interfaces that translate brain signals and eye movements into seamless interactions.',
+        link: 'https://www.axionclick.com/careers'
+    },
+    {
+        company: 'Axion',
+        role: 'Founding Software Engineer',
+        location: 'San Francisco, CA',
+        description: 'Building the software foundation for high-performance, wearable neural interface systems.',
+        link: 'https://www.axionclick.com/careers'
     }
 ];
 
