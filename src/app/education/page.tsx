@@ -38,7 +38,7 @@ export default function EducationPage() {
                 {/* Left Column */}
                 <div className="space-y-8">
                     <section>
-                        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
                             Open Data Archives
                         </h2>
                         <div className="card p-6 space-y-4">
@@ -63,7 +63,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
                             Open Source Analysis Tools
                         </h2>
                         <div className="card p-6 space-y-4">
@@ -84,7 +84,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
                             Developer Meetings
                         </h2>
                         <div className="card p-6 space-y-4">
@@ -105,7 +105,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Gold Standard Education</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Gold Standard Education</h2>
                         <div className="card p-6 border-2 border-neuro-accent/20 bg-neuro-accent/5">
                             <a href="https://academy.neuromatch.io/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
                                 Neuromatch Academy <ExternalLink className="w-4 h-4" />
@@ -134,7 +134,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Foundational Skills & Workshops</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Foundational Skills & Workshops</h2>
                         <div className="card p-6 border-l-4 border-neuro-accent bg-muted/30 mb-6">
                             <a href="https://brainhack.org/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
                                 Brainhack Global <ExternalLink className="w-4 h-4" />
@@ -228,7 +228,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Interactive Learning</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Interactive Learning</h2>
                         <div className="card p-6 border-l-4 border-neuro-accent">
                             <a href="https://eegedu.com/" target="_blank" className="text-xl font-bold hover:text-neuro-accent mb-2 block flex items-center gap-2">
                                 EEGEdu <ExternalLink className="w-4 h-4" />
@@ -247,7 +247,7 @@ export default function EducationPage() {
                 {/* Right Column */}
                 <div className="space-y-8">
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Hardware & Student Kits</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Hardware & Student Kits</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="card p-6 bg-background">
                                 <h3 className="font-bold text-lg mb-2">OpenBCI</h3>
@@ -289,7 +289,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Open Hardware & DIY</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Open Hardware & DIY</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="card p-6 bg-background">
                                 <h3 className="font-bold text-lg mb-2">FreeEEG32 / 128</h3>
@@ -329,7 +329,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Frontier Tech & Community Science</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Frontier Tech & Community Science</h2>
                         <div className="grid md:grid-cols-1 gap-6">
                             <div className="card p-6 bg-background">
                                 <h3 className="font-bold text-lg mb-2">MedARC (Sophont)</h3>
@@ -371,7 +371,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Professional Development</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Professional Development</h2>
                         <div className="grid md:grid-cols-1 gap-6">
                             {/* Summer 2026 Events */}
                             <div className="card p-6 bg-background border-2 border-neuro-accent/20">
@@ -507,7 +507,7 @@ export default function EducationPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold mb-4">Google Summer of Code (GSoC)</h2>
+                        <h2 className="text-2xl font-serif font-bold mb-4">Google Summer of Code (GSoC)</h2>
                         <div className="grid md:grid-cols-1 gap-6">
                             <div className="card p-6 bg-background border-neuro-accent/20">
                                 <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
@@ -537,7 +537,7 @@ export default function EducationPage() {
 
             {/* Community & Media Partners */}
             <div className="mt-16 mb-16">
-                <h2 className="text-2xl font-bold mb-6">Partners & Research Hubs</h2>
+                <h2 className="text-2xl font-serif font-bold mb-6">Partners & Research Hubs</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="card p-6 border-l-4 border-neuro-accent flex flex-col justify-between">
                         <div>
@@ -586,7 +586,7 @@ export default function EducationPage() {
 
             {/* Video Resources Section */}
             <div>
-                <h2 className="text-2xl font-bold mb-6">Video Resources</h2>
+                <h2 className="text-2xl font-serif font-bold mb-6">Video Resources</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                     <a href="https://www.youtube.com/playlist?list=PLQ-_L3_D0_T1y8QJ_Qk4k4Q6_Q1_" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
                         <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">NeuroTech 101</h3>

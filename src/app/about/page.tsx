@@ -1,42 +1,81 @@
 import { ArrowUpRight } from 'lucide-react';
 import styles from './page.module.css';
+import InstagramImage from '@/components/InstagramImage';
 
 export default function AboutPage() {
     return (
         <div className={styles.container}>
+            {/* Top Images from Instagram */}
+            <div className={styles.instagramGrid}>
+                <a href="https://www.instagram.com/p/DB_9Z_TSZ_S/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
+                    <InstagramImage 
+                        src="https://scontent.cdninstagram.com/v/t51.29350-15/465824322_552143820762432_7423423423423423423_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=abc&_nc_ht=scontent.cdninstagram.com&edm=AM616YwEAAAA&oh=00_AYC_abc&oe=67B86AAA" 
+                        alt="NeuroTechX Event 1" 
+                        className={styles.instagramImage} 
+                        fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+1"
+                    />
+                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors" />
+                </a>
+                <a href="https://www.instagram.com/p/C_id_mOS_ST/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
+                    <InstagramImage 
+                        src="https://scontent.cdninstagram.com/v/t51.29350-15/458234234_234234234234234_2342342342342342342_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=abc&_nc_ht=scontent.cdninstagram.com&edm=AM616YwEAAAA&oh=00_AYC_abc&oe=67B86AAA" 
+                        alt="NeuroTechX Event 2" 
+                        className={styles.instagramImage} 
+                        fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+2"
+                    />
+                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors" />
+                </a>
+            </div>
+
             <section className={styles.section}>
-                <h1 className={styles.title}>Our Origins</h1>
-                <p className="text-center max-w-2xl mx-auto mb-12 text-lg text-muted-foreground">
-                    NeuroTechX stands on the shoulders of giants. We acknowledge the <a href="https://alexandre.barachant.org/" target="_blank" className="text-neuro-accent hover:underline font-bold">founders and intellectual sources</a> whose open-source contributions laid the technical foundation for our global community.
+                <h1 className={styles.title}>Our Story</h1>
+                <p className={styles.subtitle}>
+                    NeuroTechX was founded in 2015 by Yannick Roy and a dedicated team of engineers and scientists who recognized a critical gap: the lack of a bridge between the rigorous academic world of neuroscience and the fast-paced, hands-on culture of technology enthusiasts.
+                </p>
+                <div className={styles.cardText}>
+                    <p className="mb-4">
+                        What began as a small group of hackers in Montreal quickly evolved into the largest global community for neurotechnology. Our mission remains centered on three pillars: Community, Education, and Professional Development.
+                    </p>
+                    <p>
+                        As the community grew, the need for professional consultancy and advisory services became evident. This led to the formation of <strong>NeuroTechX Services</strong> in 2019, an independent entity designed to support startups, corporations, and investors navigating the neurotech landscape. In August 2024, following a period of significant growth and the expansion of sister entities like Myelin Capital, NeuroTechX and NTX Services mutually agreed to part ways. NTX Services transitioned into a new global consultancy, allowing NeuroTechX to refocus entirely on its non-profit mission of fostering an open, global community.
+                    </p>
+                </div>
+            </section>
+
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Our Origins</h2>
+                <p className="max-w-2xl mb-12 text-lg text-muted-foreground">
+                    NeuroTechX stands on the shoulders of giants. We acknowledge the founders and intellectual sources whose open-source contributions laid the technical foundation for our global community.
                 </p>
                 
                 <div className={styles.originsGrid}>
                     <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>Paris: CogLab</h3>
-                        <span className={styles.cardLabel}>Historical Pillar</span>
+                        <h3 className={styles.cardTitle}>NeuroTechX Services</h3>
+                        <span className={styles.cardLabel}>Strategic Milestone (2019 - 2024)</span>
                         <p className={styles.cardText}>
-                            Founded in 2013 at <em>La Paillasse</em> (a community bio-hackerspace), <strong>CogLab</strong> pioneered the &quot;Community Lab&quot; model.
-                            It was one of the first grassroots groups to explore cognitive science through DIY hardware and open citizen science.
+                            Launched in 2019, NTX Services provided expert advisory to the neurotech industry. Its successful operation and eventual transition in 2024 marked a pivotal moment, enabling the core NeuroTechX organization to redouble its commitment to community-driven open science.
                         </p>
-                        <div className="flex flex-col gap-2">
-                            <a href="https://coglab.fr/home-en/" target="_blank" className={styles.link}>
-                                Visit CogLab <ArrowUpRight className={styles.icon} />
-                            </a>
-                            <a href="https://www.meetup.com/coglab/" target="_blank" className={styles.link}>
-                                Weekly Meetings (Meetup) <ArrowUpRight className={styles.icon} />
-                            </a>
-                        </div>
                     </div>
 
                     <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>San Francisco: Berkeley Cognitive Technology Group</h3>
+                        <h3 className={styles.cardTitle}>Paris: CogLab</h3>
                         <span className={styles.cardLabel}>Historical Pillar</span>
                         <p className={styles.cardText}>
-                            The <strong>Cognitive Technology Group at Berkeley</strong> was a seminal student organization that laid the groundwork for the modern student club network.
-                            Stemming from the original <strong>Exploratorium project</strong>, their work set the standard for what would become <em>NeuroTech@Berkeley</em>.
+                            Founded in 2013 at <em>La Paillasse</em>, CogLab pioneered the &quot;Community Lab&quot; model, exploring cognitive science through DIY hardware and open citizen science.
+                        </p>
+                        <a href="https://coglab.fr/home-en/" target="_blank" className={styles.link}>
+                            Visit CogLab <ArrowUpRight className={styles.icon} />
+                        </a>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>San Francisco: Berkeley CogTech</h3>
+                        <span className={styles.cardLabel}>Historical Pillar</span>
+                        <p className={styles.cardText}>
+                            The Cognitive Technology Group at Berkeley was a seminal student organization that set the standard for what would become <em>NeuroTech@Berkeley</em>.
                         </p>
                         <a href="http://www.explorecogtech.com/" target="_blank" className={styles.link}>
-                            Visit Original Project <ArrowUpRight className={styles.icon} />
+                            Visit Project <ArrowUpRight className={styles.icon} />
                         </a>
                     </div>
 
@@ -44,26 +83,20 @@ export default function AboutPage() {
                         <h3 className={styles.cardTitle}>Montreal: District 3 Workshop</h3>
                         <span className={styles.cardLabel}>Educational Milestone (2018)</span>
                         <p className={styles.cardText}>
-                            Hosted at <strong>District 3</strong> (Concordia University), the &quot;Deep Learning for EEG&quot; workshop was a seminal event that brought together the ML and Neuroscience communities.
-                            It laid the foundation for our modern educational curriculum, bridging the gap between raw signal processing and modern AI.
+                            The &quot;Deep Learning for EEG&quot; workshop at Concordia University bridged the gap between raw signal processing and modern machine learning.
                         </p>
                         <a href="https://github.com/NeuroTechX/bci-workshop" target="_blank" className={styles.link}>
-                            View Workshop Materials <ArrowUpRight className={styles.icon} />
+                            View Materials <ArrowUpRight className={styles.icon} />
                         </a>
                     </div>
 
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Global: muse-lsl & eeg-notebooks</h3>
-                        <span className={styles.cardLabel}>Technical Milestone (2019-2022)</span>
+                        <span className={styles.cardLabel}>Technical Milestone</span>
                         <p className={styles.cardText}>
-                            Created by <a href="https://alexandre.barachant.org/" target="_blank" className="hover:text-neuro-accent underline">Alexandre Barachant</a>, <strong>muse-lsl</strong> democratized access to EEG data.
-                            It was extended by <a href="https://kylemathewson.com/" target="_blank" className="hover:text-neuro-accent underline">Kyle Mathewson</a> (Use_LSL_Environments) to create the first <strong>eeg-notebooks</strong>.
-                            This toolchain enabled large-scale studies, including <a href="https://www.biorxiv.org/content/10.1101/2022.12.16.520764v1.full" target="_blank" className="hover:text-neuro-accent underline">massive hyperscanning protocols</a> with Muse headbands.
+                            The democratized access to EEG data through muse-lsl and eeg-notebooks enabled large-scale studies and hyperscanning protocols worldwide.
                         </p>
                         <div className="flex flex-col gap-2">
-                            <a href="https://github.com/alexandrebarachant/muse-lsl" target="_blank" className={styles.link}>
-                                Original muse-lsl <ArrowUpRight className={styles.icon} />
-                            </a>
                             <a href="https://github.com/NeuroTechX/eeg-notebooks" target="_blank" className={styles.link}>
                                 eeg-notebooks <ArrowUpRight className={styles.icon} />
                             </a>
@@ -71,23 +104,10 @@ export default function AboutPage() {
                     </div>
 
                     <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>Mobile: eeg-101</h3>
-                        <span className={styles.cardLabel}>Educational App (2016-2020)</span>
-                        <p className={styles.cardText}>
-                            <strong>eeg-101</strong> was an interactive mobile app that taught EEG basics using a Muse headband.
-                            It provided a hands-on learning experience for thousands of students before being superseded by the comprehensive <a href="https://eegedu.com/" target="_blank" className="hover:text-neuro-accent underline">EEGedu project</a>.
-                        </p>
-                        <a href="https://github.com/NeuroTechX/eeg-101" target="_blank" className={styles.link}>
-                            View Archived Repo <ArrowUpRight className={styles.icon} />
-                        </a>
-                    </div>
-
-                    <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>Queen&apos;s University Partnership</h3>
+                        <h3 className={styles.cardTitle}>Queen&apos;s University</h3>
                         <span className={styles.cardLabel}>Strategic Milestone (2025)</span>
                         <p className={styles.cardText}>
-                            NeuroTechX partnered with Queen&apos;s University on a grant-funded initiative to launch the <strong>Neurotech Micro-credential Program</strong>.
-                            This program sets a new standard for hands-on neurotechnology education, combining academic rigor with industry-relevant skills.
+                            A grant-funded partnership to launch the Neurotech Micro-credential Program, setting a new standard for hands-on neurotechnology education.
                         </p>
                         <a href="https://neurotechmicrocreds.com/" target="_blank" className={styles.link}>
                             Visit Program <ArrowUpRight className={styles.icon} />
@@ -103,21 +123,21 @@ export default function AboutPage() {
                         <h3 className={styles.cardTitle}>Morgan Hough</h3>
                         <span className={styles.cardLabel}>Director</span>
                         <p className={styles.cardText}>
-                            A specialist in Clinical Neurology (Oxford) and Biophysics (Reed), Morgan has a background spanning AI, medical imaging, and software engineering management. He is a co-founder of NeuroFedora and has been instrumental in bridging scientific research with open-source development.
+                            A specialist in Clinical Neurology (Oxford) and Biophysics (Reed), Morgan co-founded NeuroFedora and bridges scientific research with open-source development.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>John Griffiths, PhD</h3>
                         <span className={styles.cardLabel}>Director</span>
                         <p className={styles.cardText}>
-                            Assistant Professor at the University of Toronto and Independent Scientist at the Krembil Centre for Neuroinformatics. John specializes in mathematical modeling of large-scale brain dynamics and multimodal neuroimaging data analysis.
+                            Assistant Professor at the University of Toronto, John specializes in mathematical modeling of brain dynamics and neuroimaging analysis.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Susan Boehnke, PhD</h3>
                         <span className={styles.cardLabel}>Director</span>
                         <p className={styles.cardText}>
-                            Associate Professor at Queen&apos;s University and Director of the NeuroTech Micro-credential Program. Susan&apos;s research focuses on sensory processing and neurodegenerative diseases, and she is a leader in neurotechnology ethics and education.
+                            Associate Professor at Queen&apos;s University and Director of the NeuroTech Micro-credential Program, leading ethics and education initiatives.
                         </p>
                     </div>
                 </div>
@@ -130,21 +150,21 @@ export default function AboutPage() {
                         <h3 className={styles.cardTitle}>Han Cat Nguyen</h3>
                         <span className={styles.cardLabel}>Officer</span>
                         <p className={styles.cardText}>
-                            A biomedical engineer with expertise in biosensor design, firmware development, and brain-computer interfaces. Han has contributed significantly to research on intraoral electrooculogram monitoring and DIY neurotechnology hardware.
+                            A biomedical engineer expert in biosensor design and DIY neurotechnology hardware development.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Dhruv Mehrotra</h3>
                         <span className={styles.cardLabel}>Officer</span>
                         <p className={styles.cardText}>
-                            A neuroscience researcher and developer of Pynapple, a popular open-source toolbox for neuroscience data analysis. Dhruv&apos;s work focuses on the dynamics of spontaneous brain activity and adaptive decision-making.
+                            Neuroscience researcher and developer of Pynapple, focusing on spontaneous brain activity and decision-making.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Sophie Valentine</h3>
-                        <span className={styles.cardLabel}>Content Laboratory Lead</span>
+                        <span className={styles.cardLabel}>Content Lab Lead</span>
                         <p className={styles.cardText}>
-                            Leading the NTX Content Laboratory, Sophie brings a background in experimental psychology and cognitive neuroscience. She is an expert in digital health product innovation and a champion for diversity and inclusion in neurotechnology.
+                            Experimental psychologist leading the NTX Content Laboratory with a focus on digital health innovation.
                         </p>
                     </div>
                 </div>
