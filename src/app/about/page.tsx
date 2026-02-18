@@ -9,21 +9,25 @@ export default function AboutPage() {
             <div className={styles.instagramGrid}>
                 <a href="https://www.instagram.com/p/DB_9Z_TSZ_S/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
                     <InstagramImage 
-                        src="https://scontent.cdninstagram.com/v/t51.29350-15/465824322_552143820762432_7423423423423423423_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=abc&_nc_ht=scontent.cdninstagram.com&edm=AM616YwEAAAA&oh=00_AYC_abc&oe=67B86AAA" 
+                        src="https://placehold.co/600x600/1a1a1a/22d3ee?text=Buzz-O-Meter" 
                         alt="NeuroTechX Event 1" 
                         className={styles.instagramImage} 
                         fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+1"
                     />
-                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors" />
+                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors flex items-center justify-center">
+                        <span className="text-white font-bold opacity-0 hover:opacity-100 transition-opacity">View on Instagram</span>
+                    </div>
                 </a>
                 <a href="https://www.instagram.com/p/C_id_mOS_ST/" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
                     <InstagramImage 
-                        src="https://scontent.cdninstagram.com/v/t51.29350-15/458234234_234234234234234_2342342342342342342_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=abc&_nc_ht=scontent.cdninstagram.com&edm=AM616YwEAAAA&oh=00_AYC_abc&oe=67B86AAA" 
+                        src="https://placehold.co/600x600/1a1a1a/22d3ee?text=Global+Hackathon" 
                         alt="NeuroTechX Event 2" 
                         className={styles.instagramImage} 
                         fallbackSrc="https://placehold.co/600x600/1a1a1a/ffffff?text=Instagram+Photo+2"
                     />
-                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors" />
+                    <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors flex items-center justify-center">
+                        <span className="text-white font-bold opacity-0 hover:opacity-100 transition-opacity">View on Instagram</span>
+                    </div>
                 </a>
             </div>
 
