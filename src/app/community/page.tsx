@@ -155,11 +155,11 @@ export default function CommunityPage() {
                 <h2 className="text-2xl font-bold mb-6">Open Source, Benchmarks & Challenges</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                     <div className="card p-6">
-                        <h3 className="font-bold text-lg mb-2">EEG 2025 Challenge</h3>
+                        <h3 className="font-bold text-lg mb-2">EEG 2026 Challenge</h3>
                         <p className="text-sm text-muted-foreground mb-4">
                             Defining the next generation of EEG benchmarks.
                         </p>
-                        <a href="https://eeg2025.github.io/" target="_blank" className="text-sm font-bold text-neuro-accent hover:underline">
+                        <a href="https://eeg2026.github.io/" target="_blank" className="text-sm font-bold text-neuro-accent hover:underline">
                             View Challenge
                         </a>
                     </div>

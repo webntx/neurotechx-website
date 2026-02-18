@@ -161,7 +161,7 @@ export default function Home() {
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>
-                  The State of Neurotech 2025
+                  The State of Neurotech 2026
                 </h3>
                 <p className={styles.cardDescription}>
                   A deep dive into the emerging trends, funding landscapes, and breakthrough technologies defining the decade.

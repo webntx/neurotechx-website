@@ -414,12 +414,12 @@ export default function EducationPage() {
                             <div className="card p-6 bg-background border-neuro-accent/30">
                                 <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                     <span className="inline-block w-2 h-2 rounded-full bg-neuro-accent animate-pulse"></span>
-                                    BCI & Neurotechnology Spring School 2025
+                                    BCI & Neurotechnology Spring School 2026
                                 </h3>
                                 <p className="text-sm text-foreground/80 mb-4">
-                                    <strong>April 28 – May 7, 2025</strong>. The largest online BCI education event. 140+ hours of lectures, hackathons, and certification for free. Organized by g.tec.
+                                    <strong>April 27 – May 6, 2026</strong>. The largest online BCI education event. 140+ hours of lectures, hackathons, and certification for free. Organized by g.tec.
                                 </p>
-                                <a href="https://www.gtec.at/spring-school-2025/" target="_blank" className="text-neuro-accent hover:underline font-bold inline-flex items-center gap-1">
+                                <a href="https://www.gtec.at/spring-school-2026/" target="_blank" className="text-neuro-accent hover:underline font-bold inline-flex items-center gap-1">
                                     Register for Free <ExternalLink className="w-3 h-3" />
                                 </a>
                             </div>

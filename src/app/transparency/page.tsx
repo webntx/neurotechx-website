@@ -50,7 +50,7 @@ export default function TransparencyPage() {
                     <div className="space-y-4">
                         <div className="card p-6 flex flex-col md:flex-row justify-between items-center gap-4">
                             <div>
-                                <h3 className="font-bold text-lg">2025 Annual Financial Statements</h3>
+                                <h3 className="font-bold text-lg">2026 Annual Financial Statements</h3>
                                 <p className="text-sm text-muted-foreground">Includes Statement of Operations and Changes in Net Assets.</p>
                             </div>
                             <button className="btn btn-outline" disabled>Coming Soon</button>

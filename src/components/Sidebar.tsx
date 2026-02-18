@@ -231,7 +231,7 @@ export default async function Sidebar() {
                             <a href="https://bcisociety.org" target="_blank" className="font-bold hover:text-neuro-accent block flex items-center gap-2">
                                 BCI Society <ExternalLink className="w-3 h-3 text-muted-foreground" />
                             </a>
-                            <p className="text-xs text-muted-foreground">International society. Next meeting: Banff 2025.</p>
+                            <p className="text-xs text-muted-foreground">International society. Next meeting: 2026.</p>
                         </li>
                     </ul>
                 </div>

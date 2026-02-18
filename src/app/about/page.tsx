@@ -117,7 +117,7 @@ export default function AboutPage() {
 
                     <div className={styles.card}>
                         <h3 className={styles.cardTitle}>Queen&apos;s University</h3>
-                        <span className={styles.cardLabel}>Strategic Milestone (2025)</span>
+                        <span className={styles.cardLabel}>Strategic Milestone (2026)</span>
                         <p className={styles.cardText}>
                             A grant-funded partnership to launch the Neurotech Micro-credential Program, setting a new standard for hands-on neurotechnology education.
                         </p>
