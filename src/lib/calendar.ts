@@ -82,6 +82,15 @@ export async function fetchCalendarEvents(): Promise<CalendarEvent[]> {
                 description: 'The Future Promise of Cell & Gene Therapy for Brain Disorders.'
             },
             {
+                id: 'mila-ai-for-good-2026',
+                title: 'Hackathon Championing AI for Good: Building Safer AI for Youth Mental Health',
+                start: new Date('2026-03-16T09:00:00').toISOString(),
+                end: new Date('2026-03-23T17:00:00').toISOString(),
+                location: 'Mila, Montreal, Canada',
+                url: 'https://mila.quebec/en/event/hackathon-championing-ai-for-good-building-safer-ai-for-youth-mental-health',
+                description: 'A hackathon focused on building safer AI tools for youth mental health.'
+            },
+            {
                 id: 'mnc-2026',
                 title: 'Midwest Neurotechnology Conference (MNC)',
                 start: new Date('2026-03-27T09:00:00').toISOString(),
