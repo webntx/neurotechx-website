@@ -47,6 +47,14 @@ export async function fetchCalendarEvents(): Promise<CalendarEvent[]> {
         // Manually inject key NeuroTechX and partner events
         const manualEvents: CalendarEvent[] = [
             {
+                id: 'brain-school-2026',
+                title: 'Brain School 2026: Genes, Brains & Breakthroughs',
+                start: new Date('2026-03-09T17:00:00').toISOString(),
+                location: 'Roanoke, Virginia',
+                url: 'https://fbri.vtc.vt.edu/events/annual-brain-school.html',
+                description: 'The Future Promise of Cell & Gene Therapy for Brain Disorders.'
+            },
+            {
                 id: 'mnc-2026',
                 title: 'Midwest Neurotechnology Conference (MNC)',
                 start: new Date('2026-03-27T09:00:00').toISOString(),
