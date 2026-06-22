@@ -67,11 +67,11 @@ export default function Header() {
                 <div className={styles.bannerContainer}>
                     <div className={styles.bannerContent}>
                         <span className={styles.badge}>Upcoming</span>
-                        <span className={styles.bannerTitle}>California Neurotechnology Conference 2026</span>
-                        <span className={styles.bannerDetails}>April 26 • UC Berkeley</span>
+                        <span className={styles.bannerTitle}>CuttingGardens 2026</span>
+                        <span className={styles.bannerDetails}>M/EEG methods multi-hub • 21–25 Sep 2026</span>
                     </div>
-                    <a href="https://www.eventbrite.com/e/2026-california-neurotechnology-conference-tickets-1982321023544" target="_blank" className={styles.ticketLink}>
-                        Get Tickets <ArrowRight width={14} height={14} />
+                    <a href="https://cuttingeeg.org/cuttinggardens2026/" target="_blank" rel="noopener noreferrer" className={styles.ticketLink}>
+                        Learn more <ArrowRight width={14} height={14} />
                     </a>
                 </div>
             </div>
