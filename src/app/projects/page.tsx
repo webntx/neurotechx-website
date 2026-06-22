@@ -1,6 +1,7 @@
 import { getFeaturedProjects, getCommunityProjects, GitHubRepo } from '@/lib/github';
 import Link from 'next/link';
 import { ArrowRight, Star, GitFork, ExternalLink, Code2, BookOpen } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
 import styles from './page.module.css';
 
 export const revalidate = 3600; // Revalidate every hour
@@ -71,15 +72,11 @@ export default async function ProjectsPage() {
 
     return (
         <div className="container py-12">
-            <div className={styles.header}>
-                <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-                    Open Source <span className="text-neuro-accent">Projects</span>
-                </h1>
-                <p className="text-xl text-muted-foreground max-w-3xl">
-                    Discover the tools powering the next generation of neurotechnology.
-                    Add your project by tagging your GitHub repository with <code className="bg-muted px-2 py-1 rounded text-sm font-mono">neurotechx</code>.
-                </p>
-            </div>
+            <PageHeader
+                eyebrow="Build"
+                title={<>Open Source <span className="text-gradient">Projects</span></>}
+                subtitle={<>Discover the tools powering the next generation of neurotechnology. Add your project by tagging your GitHub repository with <code className="rounded bg-[var(--surface-2)] px-2 py-1 text-sm font-mono">neurotechx</code>.</>}
+            />
 
             <section className="mb-16">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">

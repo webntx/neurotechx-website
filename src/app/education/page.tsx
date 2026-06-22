@@ -1,13 +1,15 @@
 import { BookOpen, GraduationCap, Users, Video, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import PageHeader from '@/components/PageHeader';
 
 export default function EducationPage() {
     return (
         <div className="container py-12">
-            <h1 className="text-4xl font-serif font-bold mb-6">Education & Data</h1>
-            <p className="text-lg text-muted-foreground mb-12">
-                Curated learning resources and open standards for the community.
-            </p>
+            <PageHeader
+                eyebrow="Learn"
+                title="Education & Data"
+                subtitle="Curated learning resources and open standards for the community."
+            />
 
             <div className="mb-16 p-8 bg-muted rounded-xl border border-foreground/10 flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
