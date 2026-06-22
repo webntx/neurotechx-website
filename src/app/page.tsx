@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Users, Code2, Mic, Video, Heart } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Code2, Mic, Video, Heart, Calendar, MapPin } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import NeuralBackground from '@/components/NeuralBackground';
 import { fetchFeeds } from '@/lib/rss';
@@ -8,6 +8,7 @@ import { fetchBlueskyPosts } from '@/lib/bluesky';
 export const revalidate = 1800;
 
 const JOIN = 'https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform';
+const IEEE_WORKSHOP = 'https://brain.ieee.org/2026-ieee-brain-discovery-neurotechnology-workshop/';
 
 const PILLARS = [
   { icon: BookOpen, title: 'Education', desc: 'The NeuroTech Primer, getting-started guides, and 100+ hours of webinar archives.', href: '/education' },
@@ -61,6 +62,35 @@ export default async function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* ── Featured event spotlight ── */}
+      <section className="container pt-12 md:pt-14">
+        <a href={IEEE_WORKSHOP} target="_blank" rel="noopener noreferrer"
+          className="group relative block overflow-hidden rounded-2xl border border-[var(--border-strong)] bg-[var(--surface-1)] p-7 md:p-9 transition hover:border-neuro-accent">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_50%,rgba(34,211,238,0.12),transparent_60%)]" />
+          <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+            <div className="flex-1">
+              <p className="eyebrow mb-2">Featured · SfN 2026 satellite</p>
+              <h2 className="mb-2 text-2xl md:text-[1.9rem] font-bold leading-tight group-hover:text-neuro-accent transition-colors">
+                IEEE Brain Discovery &amp; Neurotechnology Workshop
+              </h2>
+              <p className="max-w-2xl text-muted-foreground">
+                The flagship neurotech satellite alongside Society for Neuroscience 2026 — three days of brain
+                discovery and neurotechnology in the nation&apos;s capital.
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-col gap-4 md:items-end">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+                <span className="inline-flex items-center gap-1.5"><Calendar className="h-4 w-4 text-neuro-accent" /> Nov 11–13, 2026</span>
+                <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-neuro-accent" /> Washington, DC</span>
+              </div>
+              <span className="inline-flex items-center justify-center gap-2 rounded-lg bg-neuro-accent px-6 py-3 font-bold text-[var(--background)] shadow-glow transition group-hover:brightness-110">
+                View details <ArrowRight width={17} height={17} />
+              </span>
+            </div>
+          </div>
+        </a>
       </section>
 
       {/* ── Pillars ── */}
