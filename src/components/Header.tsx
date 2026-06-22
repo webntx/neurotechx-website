@@ -24,6 +24,7 @@ export default function Header() {
                                 { name: 'Education', href: '/education' },
                                 { name: 'Events', href: 'https://luma.com/neurotechx', external: true },
                                 { name: 'Projects', href: '/projects' },
+                                { name: 'Ecosystem', href: '/ecosystem' },
                                 { name: 'Reports', href: '/reports' },
                                 { name: 'Jobs', href: '/jobs' },
                             ].map((item) => (
