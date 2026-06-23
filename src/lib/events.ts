@@ -34,6 +34,16 @@ export const EVENTS: NtxEvent[] = [
     desc: 'A distributed multi-hub conference on cutting-edge M/EEG analysis methods.',
   },
   {
+    name: 'IEEE SMC 2026', tag: 'Conference', dateLabel: 'Oct 4–7, 2026', end: '2026-10-07',
+    location: 'Bellevue, WA', url: 'https://www.ieeesmc2026.org/',
+    desc: 'IEEE Systems, Man & Cybernetics — including the Brain-Machine Interface (BMI) Workshop.',
+  },
+  {
+    name: 'BR41N.IO Hackathon @ IEEE SMC', tag: 'Hackathon', dateLabel: 'Oct 4–5, 2026', end: '2026-10-05',
+    location: 'Bellevue, WA', url: 'https://www.br41n.io/IEEE-SMC-2026',
+    desc: "g.tec's BCI hackathon during IEEE SMC — build brain-computer interface apps in a day.",
+  },
+  {
     name: 'NeuroTechX @ SF Tech Week', tag: 'Meetup', dateLabel: 'Oct 5–11, 2026', end: '2026-10-11',
     location: 'San Francisco', url: 'https://www.tech-week.com/',
     desc: 'A NeuroTechX × UC Berkeley event planned during SF Tech Week (details soon).',
