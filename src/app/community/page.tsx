@@ -32,6 +32,34 @@ export default function CommunityPage() {
                 <div className="space-y-4">
                     <div className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 bg-background rounded-lg border hover:border-neuro-accent transition-colors">
                         <div className="flex-1">
+                            <h3 className="font-bold text-lg text-foreground">California Neurotechnology Conference 2026</h3>
+                            <div className="flex gap-4 text-sm text-muted-foreground mt-1">
+                                <span>UC Berkeley</span>
+                                <span>•</span>
+                                <span>Apr 26, 2026</span>
+                            </div>
+                        </div>
+                        <a href="https://neurotech.studentorg.berkeley.edu/conference.html" target="_blank" className="text-neuro-accent font-bold hover:underline flex items-center gap-2 whitespace-nowrap">
+                            View Event Page <ExternalLink className="w-4 h-4" />
+                        </a>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 bg-background rounded-lg border hover:border-neuro-accent transition-colors">
+                        <div className="flex-1">
+                            <h3 className="font-bold text-lg text-foreground">Global NeuroHack 2026</h3>
+                            <div className="flex gap-4 text-sm text-muted-foreground mt-1">
+                                <span>Frontier Tower, San Francisco</span>
+                                <span>•</span>
+                                <span>Apr 10–12, 2026</span>
+                            </div>
+                        </div>
+                        <a href="https://global-neurohack.github.io/" target="_blank" className="text-neuro-accent font-bold hover:underline flex items-center gap-2 whitespace-nowrap">
+                            View Event Page <ExternalLink className="w-4 h-4" />
+                        </a>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 bg-background rounded-lg border hover:border-neuro-accent transition-colors">
+                        <div className="flex-1">
                             <h3 className="font-bold text-lg text-foreground">NeuroTechX Berlin Meetup @ Merantix AI Campus</h3>
                             <div className="flex gap-4 text-sm text-muted-foreground mt-1">
                                 <span>Berlin, Germany</span>
