@@ -1,12 +1,14 @@
 import { ExternalLink } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
 
 export default function CommunityPage() {
     return (
         <div className="container py-12">
-            <h1 className="text-4xl font-serif font-bold mb-6 mt-3">Community & Chapters</h1>
-            <p className="text-lg text-muted-foreground block mb-8">
-                Join a local chapter or start your own.
-            </p>
+            <PageHeader
+                eyebrow="Get involved"
+                title="Community & Chapters"
+                subtitle="Join a local chapter or start your own."
+            />
 
             <div className="mb-12">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform" target="_blank" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 py-2">

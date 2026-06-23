@@ -1,12 +1,14 @@
 import { FileText, Shield, ExternalLink } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
 
 export default function TransparencyPage() {
     return (
         <div className="container py-12 max-w-4xl">
-            <h1 className="text-4xl font-serif font-bold mb-6">Transparency & Governance</h1>
-            <p className="text-xl text-muted-foreground mb-12">
-                Building trust through radical openness. We are committed to the highest standards of transparency in our operations, finances, and research practices.
-            </p>
+            <PageHeader
+                eyebrow="Accountability"
+                title="Transparency & Governance"
+                subtitle="Building trust through radical openness — the highest standards across our operations, finances, and research practices."
+            />
 
             <div className="grid gap-12">
                 {/* Legal Entity Section */}
