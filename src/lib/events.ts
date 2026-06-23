@@ -22,11 +22,21 @@ export const EVENTS: NtxEvent[] = [
     location: 'UC Berkeley', url: 'https://neurotech.studentorg.berkeley.edu/conference.html',
     desc: '4th annual conference, co-hosted by UCLA, UCSD, UC Davis, UCSC & USC.',
   },
+  {
+    name: 'NANS 2026 — North American Neuromodulation Society', tag: 'Conference', dateLabel: 'Jan 22–25, 2026', end: '2026-01-25',
+    location: 'Las Vegas, NV', url: 'https://nans2026.org/',
+    desc: 'The leading North American neuromodulation annual meeting.',
+  },
   // ── Upcoming ──
   {
     name: 'FUN26 — Focused Ultrasound Neuromodulation', tag: 'Conference', dateLabel: 'Jul 22–24, 2026', end: '2026-07-24',
     location: 'Paris, France', url: 'https://www.itrusst.com/fun26',
     desc: 'ITRUSST conference on transcranial ultrasound stimulation & neuromodulation.',
+  },
+  {
+    name: 'CCN 2026 — Cognitive Computational Neuroscience', tag: 'Conference', dateLabel: 'Aug 3–6, 2026', end: '2026-08-06',
+    location: 'New York University', url: 'https://2026.ccneuro.org/',
+    desc: '9th annual conference uniting cognitive science, AI, and neuroscience.',
   },
   {
     name: 'CuttingGardens 2026', tag: 'Conference', dateLabel: '21–25 Sep 2026', end: '2026-09-25',
