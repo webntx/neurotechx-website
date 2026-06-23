@@ -1,12 +1,15 @@
 import { ExternalLink } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
+import EventsList from '@/components/EventsList';
 
 export default function CommunityPage() {
     return (
         <div className="container py-12">
-            <h1 className="text-4xl font-serif font-bold mb-6 mt-3">Community & Chapters</h1>
-            <p className="text-lg text-muted-foreground block mb-8">
-                Join a local chapter or start your own.
-            </p>
+            <PageHeader
+                eyebrow="Get involved"
+                title="Community & Chapters"
+                subtitle="Join a local chapter or start your own."
+            />
 
             <div className="mb-12">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform" target="_blank" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 py-2">
@@ -19,50 +22,15 @@ export default function CommunityPage() {
 
             {/* Past Events Archive */}
             <div className="mb-12 p-8 border border-border rounded-xl bg-muted/20">
-                <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                    Event Archive
-                    <span className="text-xs font-normal text-muted-foreground bg-muted px-2 py-1 rounded-full border">Beta</span>
-                </h2>
+                <h2 className="text-2xl font-bold mb-4">Events &amp; Conferences</h2>
                 <p className="text-muted-foreground mb-6 max-w-2xl">
-                    A collection of past meetups, recordings, and resources from our global chapters. Help us build this repository by submitting your chapter&apos;s links.
+                    Upcoming and recent neurotech conferences, hackathons, and workshops from across the community.
                 </p>
 
-                <div className="space-y-4">
-                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 bg-background rounded-lg border hover:border-neuro-accent transition-colors">
-                        <div className="flex-1">
-                            <h3 className="font-bold text-lg text-foreground">NeuroTechX Berlin Meetup @ Merantix AI Campus</h3>
-                            <div className="flex gap-4 text-sm text-muted-foreground mt-1">
-                                <span>Berlin, Germany</span>
-                                <span>•</span>
-                                <span>Sep 18, 2024</span>
-                            </div>
-                        </div>
-                        <a href="https://www.merantix-aicampus.com/event/neurotechx-berlin-meetup" target="_blank" className="text-neuro-accent font-bold hover:underline flex items-center gap-2 whitespace-nowrap">
-                            View Event Page <ExternalLink className="w-4 h-4" />
-                        </a>
-                    </div>
+                <EventsList />
 
-                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 bg-background rounded-lg border hover:border-neuro-accent transition-colors">
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-1">
-                                <h3 className="font-bold text-lg text-foreground">WIRED 2024: Workshop on Intracranial Recordings</h3>
-                                <span className="text-xs font-normal text-muted-foreground bg-muted px-2 py-0.5 rounded border">Partner Event</span>
-                            </div>
-                            <div className="flex gap-4 text-sm text-muted-foreground mt-1">
-                                <span>Paris, France</span>
-                                <span>•</span>
-                                <span>Mar 13-15, 2024</span>
-                            </div>
-                        </div>
-                        <a href="https://wired-icm.org/" target="_blank" className="text-neuro-accent font-bold hover:underline flex items-center gap-2 whitespace-nowrap">
-                            View Workshop <ExternalLink className="w-4 h-4" />
-                        </a>
-                    </div>
-
-                    {/* Placeholder for future contributions */}
-                    <div className="p-4 border border-dashed rounded-lg text-center text-muted-foreground text-sm">
-                        Have a past event link? <a href="https://github.com/NeuroTechX/neurotechx-website" className="text-foreground underline">Submit a PR</a> or contact us on Slack.
-                    </div>
+                <div className="mt-6 p-4 border border-dashed rounded-lg text-center text-muted-foreground text-sm">
+                    Hosting a neurotech event? <a href="https://github.com/webntx/neurotechx-website" className="text-foreground underline">Submit a PR</a> or contact us on Slack.
                 </div>
             </div>
 
