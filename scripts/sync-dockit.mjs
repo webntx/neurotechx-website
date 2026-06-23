@@ -50,7 +50,17 @@ async function syncDockit() {
                 // -t gfm (to GitHub Flavored Markdown)
                 // --wrap=none (preserve line breaks)
                 const pandocCommand = `pandoc "${rstPath}" -f rst -t gfm --wrap=none`;
-                const markdownContent = execSync(pandocCommand).toString();
+                const markdownContent = sanitizeMdx(execSync(pandocCommand).toString());
+
+                // Skip if the converted body is unchanged — avoids a daily no-op
+                // commit (and Vercel deploy) caused only by bumping updatedAt.
+                if (fs.existsSync(mdxPath)) {
+                    const existing = matter(fs.readFileSync(mdxPath, 'utf8'));
+                    if (existing.content.trim() === markdownContent.trim()) {
+                        console.log(`No content change for ${mdxFile}, skipping.`);
+                        continue;
+                    }
+                }
 
                 // Add Frontmatter
                 const title = extractTitle(rstFile) || path.basename(mdxFile, '.mdx');
@@ -80,6 +90,17 @@ async function syncDockit() {
     console.log('Cleaning up...');
     fs.rmSync(TEMP_DIR, { recursive: true, force: true });
     console.log('Sync complete.');
+}
+
+// Pandoc passes raw HTML from the .rst through unchanged. MDX/React rejects void
+// elements that wrap children (e.g. `<input ...>text</input>`), which breaks the
+// build. Rewrite them to self-closing + sibling text so MDX renders cleanly.
+function sanitizeMdx(md) {
+    return md
+        .replace(/<input\b([^>]*?)\/?\s*>([\s\S]*?)<\/input>/gi,
+            (_m, attrs, inner) => `<input${attrs.replace(/\s+$/, '')} /> ${inner.trim()}`)
+        // strip empty <form> / <ol> wrappers pandoc emits around the above
+        .replace(/<\/?form[^>]*>/gi, '');
 }
 
 function extractTitle(filename) {
