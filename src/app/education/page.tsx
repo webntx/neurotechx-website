@@ -604,7 +604,7 @@ export default function EducationPage() {
             <div>
                 <h2 className="text-2xl font-serif font-bold mb-6">Video Resources</h2>
                 <div className="grid md:grid-cols-3 gap-6">
-                    <a href="https://www.youtube.com/playlist?list=PLQ-_L3_D0_T1y8QJ_Qk4k4Q6_Q1_" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
+                    <a href="https://www.youtube.com/@neurotechx" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
                         <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">NeuroTech 101</h3>
                         <p className="text-sm text-muted-foreground">Foundational concepts and tutorials.</p>
                     </a>
