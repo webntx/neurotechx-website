@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, BookOpen, Users, Code2, Mic, Video, Heart, Calendar, MapPin } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import NeuralBackground from '@/components/NeuralBackground';
+import HeroCarousel from '@/components/HeroCarousel';
 import { fetchFeeds } from '@/lib/rss';
 import { fetchBlueskyPosts } from '@/lib/bluesky';
 
@@ -35,6 +36,17 @@ export default async function Home() {
     .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
     .slice(0, 6);
 
+  // Latest NeuroTechX blog post(s) → rotating hero slides
+  const mediumSlides = feeds
+    .filter((f) => f?.source?.name === 'NeuroTechX Medium' && f.title)
+    .slice(0, 2)
+    .map((p) => ({
+      eyebrow: 'Latest from the NeuroTechX blog',
+      title: p.title,
+      desc: (p.contentSnippet || '').replace(/<[^>]*>?/gm, '').trim().slice(0, 160),
+      ctas: [{ label: 'Read on Medium', href: p.link, external: true, primary: true }],
+    }));
+
   return (
     <div className="flex flex-col">
       {/* ── Hero ── */}
@@ -42,25 +54,8 @@ export default async function Home() {
         <NeuralBackground />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(34,211,238,0.10),transparent_55%)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--background)]/30 via-transparent to-[var(--background)]" />
-        <div className="container relative z-10 py-28 md:py-40 text-center">
-          <p className="eyebrow mb-5">The global neurotechnology community</p>
-          <h1 className="mx-auto max-w-4xl text-4xl md:text-6xl font-bold leading-[1.06] mb-6">
-            The International <span className="text-gradient">Neurotechnology</span> Community
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground mb-9">
-            NeuroTechX is a volunteer-led non-profit representing the largest global community of
-            neurotechnology innovators — education, open-source tools, and 30+ local chapters.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={JOIN} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-neuro-accent px-6 py-3.5 font-bold text-[var(--background)] shadow-glow transition hover:brightness-110">
-              Join the Community <ArrowRight width={18} height={18} />
-            </a>
-            <Link href="/education"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border-strong)] bg-[var(--surface-2)] px-6 py-3.5 font-bold text-foreground transition hover:border-neuro-accent">
-              Explore Education
-            </Link>
-          </div>
+        <div className="container relative z-10 py-24 md:py-36 text-center">
+          <HeroCarousel mediumSlides={mediumSlides} />
         </div>
       </section>
 
