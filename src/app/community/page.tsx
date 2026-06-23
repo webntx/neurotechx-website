@@ -77,7 +77,7 @@ export default function CommunityPage() {
                         </div>
                     </div>
                     <div className="mt-4 text-center">
-                        <a href="https://www.youtube.com/playlist?list=PLQ-_L3_D0_T1y8QJ_Qk4k4Q6_Q1_" target="_blank" className="text-sm font-bold text-neuro-accent hover:underline">
+                        <a href="https://www.youtube.com/@neurotechx" target="_blank" className="text-sm font-bold text-neuro-accent hover:underline">
                             Watch More Stories on YouTube →
                         </a>
                     </div>
