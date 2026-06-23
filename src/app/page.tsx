@@ -26,6 +26,14 @@ const FEATURED = [
   { icon: Heart, tag: 'Support', title: 'Support the Mission', desc: 'Help keep these resources open and free. NeuroTechX is a non-profit.', href: '/donate', cta: 'Donate' },
 ];
 
+// Events — Upcoming/Past computed from `end` date at render time.
+const EVENTS = [
+  { title: 'CuttingGardens 2026', tag: 'Conference', dateLabel: '21–25 Sep 2026', end: '2026-09-25', location: 'Distributed · multi-hub', href: 'https://cuttingeeg.org/cuttinggardens2026/', desc: 'A distributed M/EEG methods multi-hub conference.' },
+  { title: 'IEEE Brain Discovery & Neurotechnology Workshop', tag: 'Workshop', dateLabel: 'Nov 11–13, 2026', end: '2026-11-13', location: 'Washington, DC', href: IEEE_WORKSHOP, desc: 'The flagship neurotech satellite alongside Society for Neuroscience 2026.' },
+  { title: 'Global NeuroHack 2026', tag: 'Hackathon', dateLabel: 'Apr 10–12, 2026', end: '2026-04-12', location: 'Frontier Tower, SF', href: 'https://global-neurohack.github.io/', desc: 'A 48-hour student neurotech hackathon — 100+ students from world-leading universities.' },
+  { title: 'California Neurotechnology Conference 2026', tag: 'Conference', dateLabel: 'Apr 26, 2026', end: '2026-04-26', location: 'UC Berkeley', href: 'https://neurotech.studentorg.berkeley.edu/conference.html', desc: '4th annual conference, co-hosted by UCLA, UCSD, UC Davis, UCSC & USC.' },
+];
+
 export default async function Home() {
   const [feeds, bsky] = await Promise.all([
     fetchFeeds().catch(() => []),
@@ -47,6 +55,15 @@ export default async function Home() {
       ctas: [{ label: 'Read on Medium', href: p.link, external: true, primary: true }],
     }));
 
+  const now = new Date();
+  const sortedEvents = [...EVENTS].sort((a, b) => {
+    const ap = new Date(a.end) < now, bp = new Date(b.end) < now;
+    if (ap !== bp) return ap ? 1 : -1; // upcoming first
+    return ap
+      ? new Date(b.end).getTime() - new Date(a.end).getTime() // past: most recent first
+      : new Date(a.end).getTime() - new Date(b.end).getTime(); // upcoming: soonest first
+  });
+
   return (
     <div className="flex flex-col">
       {/* ── Hero ── */}
@@ -59,33 +76,35 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Featured event spotlight ── */}
+      {/* ── Events ── */}
       <section className="container pt-12 md:pt-14">
-        <a href={IEEE_WORKSHOP} target="_blank" rel="noopener noreferrer"
-          className="group relative block overflow-hidden rounded-2xl border border-[var(--border-strong)] bg-[var(--surface-1)] p-7 md:p-9 transition hover:border-neuro-accent">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_50%,rgba(34,211,238,0.12),transparent_60%)]" />
-          <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
-            <div className="flex-1">
-              <p className="eyebrow mb-2">Featured · SfN 2026 satellite</p>
-              <h2 className="mb-2 text-2xl md:text-[1.9rem] font-bold leading-tight group-hover:text-neuro-accent transition-colors">
-                IEEE Brain Discovery &amp; Neurotechnology Workshop
-              </h2>
-              <p className="max-w-2xl text-muted-foreground">
-                The flagship neurotech satellite alongside Society for Neuroscience 2026 — three days of brain
-                discovery and neurotechnology in the nation&apos;s capital.
-              </p>
-            </div>
-            <div className="flex shrink-0 flex-col gap-4 md:items-end">
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
-                <span className="inline-flex items-center gap-1.5"><Calendar className="h-4 w-4 text-neuro-accent" /> Nov 11–13, 2026</span>
-                <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-neuro-accent" /> Washington, DC</span>
-              </div>
-              <span className="inline-flex items-center justify-center gap-2 rounded-lg bg-neuro-accent px-6 py-3 font-bold text-[var(--background)] shadow-glow transition group-hover:brightness-110">
-                View details <ArrowRight width={17} height={17} />
-              </span>
-            </div>
-          </div>
-        </a>
+        <p className="eyebrow mb-2">Events</p>
+        <h2 className="mb-8 text-2xl md:text-3xl font-bold">Conferences &amp; hackathons</h2>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {sortedEvents.map((e) => {
+            const past = new Date(e.end) < now;
+            return (
+              <a key={e.title} href={e.href} target="_blank" rel="noopener noreferrer"
+                className="group rounded-xl border border-[var(--border)] bg-[var(--surface-1)] p-6 transition hover:border-neuro-accent hover:-translate-y-0.5">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                    style={past
+                      ? { background: 'var(--surface-3)', color: 'var(--muted-foreground)' }
+                      : { background: 'rgba(34,211,238,0.15)', color: 'var(--neuro-accent)' }}>
+                    {past ? 'Past' : 'Upcoming'}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{e.tag}</span>
+                </div>
+                <h3 className="mb-3 text-lg font-bold leading-snug group-hover:text-neuro-accent transition-colors">{e.title}</h3>
+                <div className="mb-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5"><Calendar className="h-4 w-4 text-neuro-accent" /> {e.dateLabel}</span>
+                  <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-neuro-accent" /> {e.location}</span>
+                </div>
+                <p className="text-sm text-muted-foreground">{e.desc}</p>
+              </a>
+            );
+          })}
+        </div>
       </section>
 
       {/* ── Pillars ── */}
