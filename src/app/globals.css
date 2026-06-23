@@ -123,13 +123,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grid-river {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .grid-river {
+    display: grid;
+    gap: 2rem;
     grid-template-columns: 2fr 1fr;
   }
 }
