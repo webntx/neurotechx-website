@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Users, Code2, Mic, Video, Heart, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Code2, Mic, Video, Heart } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import NeuralBackground from '@/components/NeuralBackground';
 import HeroCarousel from '@/components/HeroCarousel';
+import EventsList from '@/components/EventsList';
 import { fetchFeeds } from '@/lib/rss';
 import { fetchBlueskyPosts } from '@/lib/bluesky';
 
 export const revalidate = 1800;
 
 const JOIN = 'https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform';
-const IEEE_WORKSHOP = 'https://brain.ieee.org/2026-ieee-brain-discovery-neurotechnology-workshop/';
 
 const PILLARS = [
   { icon: BookOpen, title: 'Education', desc: 'The NeuroTech Primer, getting-started guides, and 100+ hours of webinar archives.', href: '/education' },
@@ -25,15 +25,6 @@ const FEATURED = [
   { icon: Users, tag: 'Network', title: 'Local Chapters', desc: 'Connect with neurotech enthusiasts in 30+ cities worldwide.', href: '/community', cta: 'Find a chapter' },
   { icon: Heart, tag: 'Support', title: 'Support the Mission', desc: 'Help keep these resources open and free. NeuroTechX is a non-profit.', href: '/donate', cta: 'Donate' },
 ];
-
-// Events — Upcoming/Past computed from `end` date at render time.
-const EVENTS = [
-  { title: 'CuttingGardens 2026', tag: 'Conference', dateLabel: '21–25 Sep 2026', end: '2026-09-25', location: 'Distributed · multi-hub', href: 'https://cuttingeeg.org/cuttinggardens2026/', desc: 'A distributed M/EEG methods multi-hub conference.' },
-  { title: 'IEEE Brain Discovery & Neurotechnology Workshop', tag: 'Workshop', dateLabel: 'Nov 11–13, 2026', end: '2026-11-13', location: 'Washington, DC', href: IEEE_WORKSHOP, desc: 'The flagship neurotech satellite alongside Society for Neuroscience 2026.' },
-  { title: 'Global NeuroHack 2026', tag: 'Hackathon', dateLabel: 'Apr 10–12, 2026', end: '2026-04-12', location: 'Frontier Tower, SF', href: 'https://global-neurohack.github.io/', desc: 'A 48-hour student neurotech hackathon — 100+ students from world-leading universities.' },
-  { title: 'California Neurotechnology Conference 2026', tag: 'Conference', dateLabel: 'Apr 26, 2026', end: '2026-04-26', location: 'UC Berkeley', href: 'https://neurotech.studentorg.berkeley.edu/conference.html', desc: '4th annual conference, co-hosted by UCLA, UCSD, UC Davis, UCSC & USC.' },
-];
-
 export default async function Home() {
   const [feeds, bsky] = await Promise.all([
     fetchFeeds().catch(() => []),
@@ -55,15 +46,6 @@ export default async function Home() {
       ctas: [{ label: 'Read on Medium', href: p.link, external: true, primary: true }],
     }));
 
-  const now = new Date();
-  const sortedEvents = [...EVENTS].sort((a, b) => {
-    const ap = new Date(a.end) < now, bp = new Date(b.end) < now;
-    if (ap !== bp) return ap ? 1 : -1; // upcoming first
-    return ap
-      ? new Date(b.end).getTime() - new Date(a.end).getTime() // past: most recent first
-      : new Date(a.end).getTime() - new Date(b.end).getTime(); // upcoming: soonest first
-  });
-
   return (
     <div className="flex flex-col">
       {/* ── Hero ── */}
@@ -80,31 +62,7 @@ export default async function Home() {
       <section className="container pt-12 md:pt-14">
         <p className="eyebrow mb-2">Events</p>
         <h2 className="mb-8 text-2xl md:text-3xl font-bold">Conferences &amp; hackathons</h2>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {sortedEvents.map((e) => {
-            const past = new Date(e.end) < now;
-            return (
-              <a key={e.title} href={e.href} target="_blank" rel="noopener noreferrer"
-                className="group rounded-xl border border-[var(--border)] bg-[var(--surface-1)] p-6 transition hover:border-neuro-accent hover:-translate-y-0.5">
-                <div className="mb-3 flex items-center gap-2">
-                  <span className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
-                    style={past
-                      ? { background: 'var(--surface-3)', color: 'var(--muted-foreground)' }
-                      : { background: 'rgba(34,211,238,0.15)', color: 'var(--neuro-accent)' }}>
-                    {past ? 'Past' : 'Upcoming'}
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{e.tag}</span>
-                </div>
-                <h3 className="mb-3 text-lg font-bold leading-snug group-hover:text-neuro-accent transition-colors">{e.title}</h3>
-                <div className="mb-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                  <span className="inline-flex items-center gap-1.5"><Calendar className="h-4 w-4 text-neuro-accent" /> {e.dateLabel}</span>
-                  <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-neuro-accent" /> {e.location}</span>
-                </div>
-                <p className="text-sm text-muted-foreground">{e.desc}</p>
-              </a>
-            );
-          })}
-        </div>
+        <EventsList />
       </section>
 
       {/* ── Pillars ── */}
