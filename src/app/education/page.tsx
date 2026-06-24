@@ -87,6 +87,35 @@ export default function EducationPage() {
 
                     <section>
                         <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
+                            EEG Standards &amp; Reproducibility
+                        </h2>
+                        <div className="card p-6 space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                                Open standards and tooling for FAIR, reproducible EEG — from the EEG101 &amp; INDoS COST Actions.
+                            </p>
+                            <ul className="space-y-3">
+                                <li>
+                                    <a href="https://linktr.ee/eegcf" target="_blank" className="block font-bold hover:text-neuro-accent">EEG Community Framework</a>
+                                    <span className="text-xs text-muted-foreground">Rigor, democratization & sustainability for open EEG science.</span>
+                                </li>
+                                <li>
+                                    <a href="https://artemis.incf.org/" target="_blank" className="block font-bold hover:text-neuro-accent">ARTEM-IS</a>
+                                    <span className="text-xs text-muted-foreground">Interactive web app for structured, standardized EEG/ERP methods reporting.</span>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/ANCPLabOldenburg/BIDS-Manager" target="_blank" className="block font-bold hover:text-neuro-accent">BIDS Manager</a>
+                                    <span className="text-xs text-muted-foreground">GUI for raw-to-BIDS curation across MRI, MEG & EEG datasets.</span>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/ANCPLabOldenburg/MEGqc" target="_blank" className="block font-bold hover:text-neuro-accent">MEEGqc</a>
+                                    <span className="text-xs text-muted-foreground">BIDS-aligned Python toolbox for MEG/EEG quality assessment & control.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
                             Developer Meetings
                         </h2>
                         <div className="card p-6 space-y-4">

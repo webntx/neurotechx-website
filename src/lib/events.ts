@@ -22,6 +22,11 @@ export const EVENTS: NtxEvent[] = [
     location: 'UC Berkeley', url: 'https://neurotech.studentorg.berkeley.edu/conference.html',
     desc: '4th annual conference, co-hosted by UCLA, UCSD, UC Davis, UCSC & USC.',
   },
+  {
+    name: 'OHBM BrainHack 2026', tag: 'Hackathon', dateLabel: 'Jun 11–13, 2026', end: '2026-06-13',
+    location: 'Bordeaux, France', url: 'https://ohbm.github.io/hackathon2026/',
+    desc: 'OHBM hackathon — incl. the EEG101 & INDoS open/FAIR EEG workshops.',
+  },
   // ── Upcoming ──
   {
     name: 'NYC Neuromodulation Conference 2026', tag: 'Conference', dateLabel: 'Jul 30 – Aug 3, 2026', end: '2026-08-03',
