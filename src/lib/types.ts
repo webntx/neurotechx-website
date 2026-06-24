@@ -7,6 +7,7 @@ export interface NewsItem {
     pubDate: string; // ISO string
     contentSnippet?: string;
     content?: string;
+    image?: string; // first image (thumbnail), if any
     source: {
         name: string;
         url?: string;

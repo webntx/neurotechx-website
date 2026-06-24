@@ -35,24 +35,36 @@ export default async function ContentLabPage() {
                             href={a.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface-1)] p-6 transition hover:border-neuro-accent hover:-translate-y-0.5"
+                            className="group flex flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface-1)] transition hover:border-neuro-accent hover:-translate-y-0.5"
                         >
-                            <div className="mb-3 flex items-center gap-2 text-xs text-muted-foreground">
-                                {a.author && <span className="font-medium text-foreground/80">{a.author}</span>}
-                                {a.author && <span>·</span>}
-                                <time dateTime={a.pubDate}>{formatDistanceToNow(new Date(a.pubDate), { addSuffix: true })}</time>
+                            <div className="aspect-[16/9] overflow-hidden border-b border-[var(--border)] bg-[var(--surface-2)]">
+                                {a.image ? (
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img src={a.image} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                                ) : (
+                                    <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_70%_30%,rgba(34,211,238,0.18),transparent_60%)]">
+                                        <span className="font-display text-2xl text-[var(--border-strong)]">NTX</span>
+                                    </div>
+                                )}
                             </div>
-                            <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug group-hover:text-neuro-accent transition-colors">
-                                {a.title}
-                            </h3>
-                            {a.contentSnippet && (
-                                <p className="line-clamp-3 flex-1 text-sm text-muted-foreground">
-                                    {a.contentSnippet.replace(/<[^>]*>?/gm, '').trim()}
-                                </p>
-                            )}
-                            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neuro-accent">
-                                Read on Medium <ArrowRight width={15} height={15} />
-                            </span>
+                            <div className="flex flex-1 flex-col p-6">
+                                <div className="mb-3 flex items-center gap-2 text-xs text-muted-foreground">
+                                    {a.author && <span className="font-medium text-foreground/80">{a.author}</span>}
+                                    {a.author && <span>·</span>}
+                                    <time dateTime={a.pubDate}>{formatDistanceToNow(new Date(a.pubDate), { addSuffix: true })}</time>
+                                </div>
+                                <h3 className="mb-2 line-clamp-2 text-lg font-bold leading-snug group-hover:text-neuro-accent transition-colors">
+                                    {a.title}
+                                </h3>
+                                {a.contentSnippet && (
+                                    <p className="line-clamp-3 flex-1 text-sm text-muted-foreground">
+                                        {a.contentSnippet.replace(/<[^>]*>?/gm, '').trim()}
+                                    </p>
+                                )}
+                                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neuro-accent">
+                                    Read on Medium <ArrowRight width={15} height={15} />
+                                </span>
+                            </div>
                         </a>
                     ))}
                 </div>

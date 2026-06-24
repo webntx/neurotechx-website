@@ -81,6 +81,11 @@ export async function fetchFeeds(feeds: FeedConfig[] = FEEDS): Promise<NewsItem[
                     ? item.categories.map((c: any) => typeof c === 'string' ? c : JSON.stringify(c))
                     : [];
 
+                // First image (thumbnail) from content:encoded / media:content
+                const encoded: string = (item['content:encoded'] || item.content || '') as string;
+                const imgMatch = /<img[^>]+src=["']([^"']+)["']/i.exec(encoded);
+                const image = imgMatch?.[1] || item['media:content']?.$?.url || undefined;
+
                 return {
                     id: item.guid || item.link || Math.random().toString(36).substr(2, 9),
                     title: item.title || 'Untitled',
@@ -88,6 +93,7 @@ export async function fetchFeeds(feeds: FeedConfig[] = FEEDS): Promise<NewsItem[
                     pubDate,
                     contentSnippet: (item.contentSnippet || item.summary || '').substring(0, 600), // Slightly larger snippet
                     content: '', // Drop full content to reduce build size/memory usage since we don't display it
+                    image,
                     author: item.creator || item['dc:creator'] || null,
                     categories: categories,
                     source: {
