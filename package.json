@@ -10,6 +10,7 @@
     "sync:dockit": "node scripts/sync-dockit.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "date-fns": "^4.1.0",
     "ical.js": "^2.2.1",
     "lucide-react": "^0.563.0",
