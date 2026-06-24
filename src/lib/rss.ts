@@ -43,10 +43,18 @@ export const FEEDS: FeedConfig[] = [
     }
 ];
 
-export async function fetchFeeds(): Promise<NewsItem[]> {
+// Business / industry-oriented neurotech news + press releases (Reports page).
+// Google News RSS search feeds — aggregate articles & PRs, neurotech-targeted, always fresh.
+export const REPORTS_FEEDS: FeedConfig[] = [
+    { name: 'Industry News', type: 'external', url: 'https://news.google.com/rss/search?q=neurotechnology+OR+%22brain-computer+interface%22&hl=en-US&gl=US&ceid=US:en' },
+    { name: 'Funding & Startups', type: 'external', url: 'https://news.google.com/rss/search?q=neurotech+funding+OR+%22brain+computer+interface%22+startup&hl=en-US&gl=US&ceid=US:en' },
+    { name: 'Companies & Devices', type: 'external', url: 'https://news.google.com/rss/search?q=neuromodulation+OR+neuralink+OR+synchron+device&hl=en-US&gl=US&ceid=US:en' },
+];
+
+export async function fetchFeeds(feeds: FeedConfig[] = FEEDS): Promise<NewsItem[]> {
     const allItems: NewsItem[] = [];
 
-    const feedPromises = FEEDS.map(async (feed) => {
+    const feedPromises = feeds.map(async (feed) => {
         try {
             console.log(`Fetching feed: ${feed.name} (${feed.url})`);
             const parsed = await parser.parseURL(feed.url);
