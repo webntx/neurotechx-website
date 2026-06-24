@@ -173,6 +173,24 @@ export default function CommunityPage() {
                 </div>
             </div>
 
+            {/* Open Science Networks */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold mb-6">Open Science Networks</h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl">
+                    EU-funded COST Action networks advancing open, FAIR, and reproducible neuroimaging — open to researchers worldwide to join.
+                </p>
+                <div className="grid md:grid-cols-2 gap-8">
+                    <a href="https://eeg101.eu/" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
+                        <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">EEG101 (COST Action CA24148)</h3>
+                        <p className="text-sm text-muted-foreground">Reducing methodological inconsistencies through shared EEG reporting standards and harmonized datasets.</p>
+                    </a>
+                    <a href="https://www.indos-costaction.eu" target="_blank" className="card p-6 block hover:border-neuro-accent transition-colors group">
+                        <h3 className="font-bold text-lg mb-2 group-hover:text-neuro-accent">INDoS (COST Action CA24161)</h3>
+                        <p className="text-sm text-muted-foreground">Making multimodal neuroimaging data (MRI, MEG, EEG) Findable, Accessible, Interoperable &amp; Reusable.</p>
+                    </a>
+                </div>
+            </div>
+
             {/* Forums & Support */}
             <div className="mb-12">
                 <h2 className="text-2xl font-bold mb-6">Forums & Support</h2>
