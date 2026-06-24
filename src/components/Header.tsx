@@ -36,7 +36,7 @@ export default function Header() {
                                 { name: 'Ecosystem', href: '/ecosystem' },
                                 { name: 'Reports', href: '/reports' },
                                 { name: 'Jobs', href: '/jobs' },
-                            ].map((item) => (
+                            ].map((item: { name: string; href: string; external?: boolean }) => (
                                 item.external ? (
                                     <a
                                         key={item.name}
@@ -99,7 +99,7 @@ export default function Header() {
                     { name: 'Ecosystem', href: '/ecosystem' },
                     { name: 'Reports', href: '/reports' },
                     { name: 'Jobs', href: '/jobs' },
-                ].map((item) => (
+                ].map((item: { name: string; href: string; external?: boolean }) => (
                     item.external ? (
                         <a
                             key={item.name}
