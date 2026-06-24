@@ -58,20 +58,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Events ── */}
-      <section className="container pt-12 md:pt-14">
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow mb-2">Events</p>
-            <h2 className="text-2xl md:text-3xl font-bold">Conferences &amp; hackathons</h2>
-          </div>
-          <Link href="/events" className="hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-neuro-accent sm:inline-flex">
-            All events &amp; Luma calendar <ArrowRight width={15} height={15} />
-          </Link>
-        </div>
-        <EventsList />
-      </section>
-
       {/* ── Pillars ── */}
       <section className="container py-16 md:py-20">
         <div className="grid gap-6 md:grid-cols-3">
@@ -112,6 +98,23 @@ export default async function Home() {
             );
           })}
         </div>
+      </section>
+
+      {/* ── Events (teaser: next 2 upcoming) ── */}
+      <section className="container py-16 md:py-20">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow mb-2">Events</p>
+            <h2 className="text-2xl md:text-3xl font-bold">What&apos;s coming up</h2>
+          </div>
+          <Link href="/events" className="hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-neuro-accent sm:inline-flex">
+            All events &amp; Luma calendar <ArrowRight width={15} height={15} />
+          </Link>
+        </div>
+        <EventsList upcomingOnly limit={2} />
+        <Link href="/events" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neuro-accent sm:hidden">
+          All events &amp; Luma calendar <ArrowRight width={15} height={15} />
+        </Link>
       </section>
 
       {/* ── Pulse (live feed: RSS + Bluesky) ── */}

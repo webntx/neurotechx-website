@@ -3,8 +3,17 @@ import { sortedEvents } from '@/lib/events';
 
 // Shared events grid (Upcoming/Past badges, sorted upcoming-first). Used on the
 // homepage and the community page so there's a single source of truth.
-export default function EventsList() {
-  const events = sortedEvents();
+// `upcomingOnly` drops past events; `limit` caps the count (e.g. homepage teaser).
+export default function EventsList({
+  upcomingOnly = false,
+  limit,
+}: {
+  upcomingOnly?: boolean;
+  limit?: number;
+} = {}) {
+  let events = sortedEvents();
+  if (upcomingOnly) events = events.filter((e) => !e.past);
+  if (limit) events = events.slice(0, limit);
   return (
     <div className="grid gap-6 sm:grid-cols-2">
       {events.map((e) => (
