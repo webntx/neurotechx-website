@@ -1,6 +1,5 @@
 import { ExternalLink } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
-import EventsList from '@/components/EventsList';
 import Chapters from '@/components/Chapters';
 
 export default function CommunityPage() {
@@ -24,20 +23,6 @@ export default function CommunityPage() {
             {/* Chapters: world map + featured + full list */}
             <div className="mb-16">
                 <Chapters />
-            </div>
-
-            {/* Past Events Archive */}
-            <div className="mb-12 p-8 border border-border rounded-xl bg-muted/20">
-                <h2 className="text-2xl font-bold mb-4">Events &amp; Conferences</h2>
-                <p className="text-muted-foreground mb-6 max-w-2xl">
-                    Upcoming and recent neurotech conferences, hackathons, and workshops from across the community.
-                </p>
-
-                <EventsList />
-
-                <div className="mt-6 p-4 border border-dashed rounded-lg text-center text-muted-foreground text-sm">
-                    Hosting a neurotech event? <a href="https://github.com/webntx/neurotechx-website" className="text-foreground underline">Submit a PR</a> or contact us on Slack.
-                </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">

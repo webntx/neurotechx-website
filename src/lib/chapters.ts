@@ -15,6 +15,17 @@ export type Chapter = {
   map: [number, number];
 };
 
+// University / student clubs — shown on the map with a distinct (violet) pin
+// and a dedicated section. `school` is the institution; `url` is optional
+// (omit when we don't have a verified current link).
+export type StudentClub = {
+  name: string;
+  school: string;
+  country?: string;
+  url?: string;
+  map: [number, number];
+};
+
 const JOIN = 'https://docs.google.com/forms/d/e/1FAIpQLSfZyzhVdOLU8_oQ4NylHL8EFoKLIVmryGXA4u7HDsZpkTryvg/viewform';
 
 export const CHAPTERS: Chapter[] = [
@@ -77,6 +88,21 @@ export const CHAPTERS: Chapter[] = [
   { name: 'Lima', city: 'Lima', status: 'active', url: 'https://lima.neurotechx.com', map: [320.2, 238.1] },
   { name: 'Ottawa', city: 'Ottawa', status: 'active', url: 'https://ott.neurotechx.com', map: [323.4, 104] },
   { name: 'Hamilton', city: 'Hamilton', status: 'active', url: 'https://ha.neurotechx.com', map: [313.6, 109.1] },
+];
+
+// Student clubs that organized / competed in Global NeuroHack 2026.
+// (Sourced from GNH 2026 coverage, not the deprecated student-clubs directory —
+//  add/prune as the roster is confirmed; some links pending.)
+export const STUDENT_CLUBS: StudentClub[] = [
+  { name: 'NeuroTechSC', school: 'UC Santa Cruz', country: 'USA', url: 'https://neurotech.ucsc.edu/', map: [215.3, 123.7] },
+  { name: 'Neurotech@Berkeley', school: 'UC Berkeley', country: 'USA', url: 'https://neurotech.berkeley.edu/', map: [214.7, 121.6] },
+  { name: 'Neurotech@Davis', school: 'UC Davis', country: 'USA', url: 'https://neurotechdavis.org/', map: [215.9, 120.1] },
+  { name: 'Stanford Neurotech', school: 'Stanford University', country: 'USA', map: [214.9, 122.7] },
+  { name: 'McGill NeuroTech', school: 'McGill University', country: 'Canada', url: 'https://www.facebook.com/McGillNeurotech', map: [328.3, 103.8] },
+  { name: 'Johns Hopkins NeuroTech', school: 'Johns Hopkins University', country: 'USA', map: [321.2, 118.3] },
+  { name: 'Penn Neurotech', school: 'University of Pennsylvania', country: 'USA', map: [324.6, 116.8] },
+  { name: 'Texas Neurotech', school: 'UT Austin', country: 'USA', map: [271.9, 139.4] },
+  { name: 'Imperial College Neurotech', school: 'Imperial College London', country: 'UK', map: [499.6, 89.8] },
 ];
 
 export const FEATURED_CHAPTERS = CHAPTERS.filter((c) => c.featured);
