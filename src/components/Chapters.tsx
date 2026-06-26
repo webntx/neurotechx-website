@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import WorldMap from './WorldMap';
-import { FEATURED_CHAPTERS, OTHER_CHAPTERS, STATUS_LABEL, type ChapterStatus } from '@/lib/chapters';
+import { FEATURED_CHAPTERS, OTHER_CHAPTERS, STUDENT_CLUBS, STATUS_LABEL, type ChapterStatus } from '@/lib/chapters';
 
 function statusStyle(status: ChapterStatus): React.CSSProperties {
   switch (status) {
@@ -27,6 +27,9 @@ export default function Chapters() {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#fbbf24' }} /> Restarting
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#a78bfa' }} /> Student club
           </span>
         </div>
       </div>
@@ -74,6 +77,47 @@ export default function Chapters() {
               {c.city} <ArrowUpRight width={13} height={13} className="opacity-60" />
             </a>
           ))}
+        </div>
+      </div>
+
+      {/* Student clubs */}
+      <div className="mt-12">
+        <h3 className="mb-1 text-sm font-semibold uppercase tracking-wider text-muted-foreground">Student clubs</h3>
+        <p className="mb-4 max-w-2xl text-sm text-muted-foreground">
+          University clubs that organized and competed in{' '}
+          <a href="https://global-neurohack.github.io/" target="_blank" rel="noopener noreferrer" className="font-medium text-neuro-accent hover:underline">
+            Global NeuroHack 2026
+          </a>
+          .
+        </p>
+        <div className="flex flex-wrap gap-2.5">
+          {STUDENT_CLUBS.map((s) => {
+            const inner = (
+              <>
+                <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: '#a78bfa' }} />
+                <span>{s.name}</span>
+                <span className="text-muted-foreground">· {s.school}</span>
+              </>
+            );
+            return s.url ? (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-1)] px-3.5 py-1.5 text-sm font-medium transition hover:border-[#a78bfa] hover:text-foreground"
+              >
+                {inner}
+              </a>
+            ) : (
+              <span
+                key={s.name}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-1)] px-3.5 py-1.5 text-sm font-medium text-foreground/80"
+              >
+                {inner}
+              </span>
+            );
+          })}
         </div>
       </div>
 
