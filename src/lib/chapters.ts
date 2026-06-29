@@ -98,7 +98,7 @@ export const STUDENT_CLUBS: StudentClub[] = [
   { name: 'Neurotech@Berkeley', school: 'UC Berkeley', country: 'USA', url: 'https://neurotech.berkeley.edu/', map: [214.7, 121.6] },
   { name: 'Neurotech@Davis', school: 'UC Davis', country: 'USA', url: 'https://neurotechdavis.org/', map: [215.9, 120.1] },
   { name: 'McGill NeuroTech', school: 'McGill University', country: 'Canada', url: 'https://www.facebook.com/McGillNeurotech', map: [328.3, 103.8] },
-  { name: 'Johns Hopkins NeuroTech', school: 'Johns Hopkins University', country: 'USA', map: [321.2, 118.3] },
+  { name: 'JHU BCI Society', school: 'Johns Hopkins University', country: 'USA', url: 'https://jhu.campusgroups.com/jhubcis/home/', map: [321.2, 118.3] },
   { name: 'Penn Neurotech', school: 'University of Pennsylvania', country: 'USA', map: [324.6, 116.8] },
   { name: 'Longhorn Neurotech', school: 'UT Austin', country: 'USA', url: 'https://lhneurotech.com/', map: [271.9, 139.4] },
   { name: 'Imperial College Neurotech', school: 'Imperial College London', country: 'UK', map: [499.6, 89.8] },
