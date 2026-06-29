@@ -34,7 +34,7 @@ export default function AboutPage() {
             <section className={styles.section}>
                 <h1 className={styles.title}>Our Story</h1>
                 <p className={styles.subtitle}>
-                    NeuroTechX was founded in 2015 by Yannick Roy and a dedicated team of engineers and scientists who recognized a critical gap: the lack of a bridge between the rigorous academic world of neuroscience and the fast-paced, hands-on culture of technology enthusiasts.
+                    NeuroTechX was founded in 2015 by Yannick Roy together with co-founders Sydney Swaine-Simon, Marion Le Borgne, Melanie Segado, and Ferdinand Ephrem — a dedicated team of engineers and scientists who recognized a critical gap: the lack of a bridge between the rigorous academic world of neuroscience and the fast-paced, hands-on culture of technology enthusiasts.
                 </p>
                 <div className={styles.cardText}>
                     <p>
