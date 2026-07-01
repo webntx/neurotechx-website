@@ -1,13 +1,16 @@
 import { ArrowUpRight } from 'lucide-react';
 import WorldMap from './WorldMap';
-import { FEATURED_CHAPTERS, OTHER_CHAPTERS, STUDENT_CLUBS, STATUS_LABEL, type ChapterStatus } from '@/lib/chapters';
+import { FEATURED_CHAPTERS, OTHER_CHAPTERS, STUDENT_CLUBS, STATUS_LABEL, STATUS_COLOR, type ChapterStatus } from '@/lib/chapters';
 
 function statusStyle(status: ChapterStatus): React.CSSProperties {
   switch (status) {
     case 'restarting':
       return { background: 'rgba(251,191,36,0.15)', color: '#fbbf24' };
+    case 'soon':
     case 'new':
       return { background: 'rgba(74,222,128,0.15)', color: '#4ade80' };
+    case 'inactive':
+      return { background: 'rgba(107,114,128,0.15)', color: '#9ca3af' };
     default:
       return { background: 'rgba(34,211,238,0.15)', color: 'var(--neuro-accent)' };
   }
@@ -27,6 +30,12 @@ export default function Chapters() {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#fbbf24' }} /> Restarting
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#4ade80' }} /> Coming soon
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#6b7280' }} /> Inactive
           </span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: '#a78bfa' }} /> Student club
@@ -73,7 +82,9 @@ export default function Chapters() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-1)] px-3.5 py-1.5 text-sm font-medium transition hover:border-neuro-accent hover:text-neuro-accent"
+              title={STATUS_LABEL[c.status]}
             >
+              <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: STATUS_COLOR[c.status] }} />
               {c.city} <ArrowUpRight width={13} height={13} className="opacity-60" />
             </a>
           ))}

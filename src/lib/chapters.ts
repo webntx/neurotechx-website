@@ -1,8 +1,8 @@
 // NeuroTechX local chapters. `map` holds pre-projected [x,y] coordinates for the
-// equirectangular WorldMap (viewBox 1000×420) — see scripts that generated them.
+// Gall–Peters WorldMap (viewBox 1000×637) — see scripts that generated them.
 // Status drives the badge; `featured` promotes a chapter to a large card.
 
-export type ChapterStatus = 'active' | 'restarting' | 'new';
+export type ChapterStatus = 'active' | 'restarting' | 'soon' | 'inactive' | 'new';
 
 export type Chapter = {
   name: string;        // display name
@@ -85,9 +85,27 @@ export const CHAPTERS: Chapter[] = [
   { name: 'Tel Aviv', city: 'Tel Aviv', status: 'active', url: 'https://tlv.neurotechx.com', map: [596.6, 149.3] },
   { name: 'Vancouver', city: 'Vancouver', status: 'active', url: 'https://van.neurotechx.com', map: [158, 77.1] },
   { name: 'Waterloo', city: 'Waterloo', status: 'active', url: 'https://kw.neurotechx.com', map: [276.3, 99.4] },
-  { name: 'Lima', city: 'Lima', status: 'active', url: 'https://lima.neurotechx.com', map: [286, 384.8] },
+  { name: 'Lima', city: 'Lima', status: 'inactive', url: 'https://lima.neurotechx.com', map: [286, 384.8] },
   { name: 'Ottawa', city: 'Ottawa', status: 'active', url: 'https://ott.neurotechx.com', map: [289.7, 91.6] },
   { name: 'Hamilton', city: 'Hamilton', status: 'active', url: 'https://ha.neurotechx.com', map: [278.1, 100.2] },
+
+  // ── Latin America ──
+  { name: 'La Paz', city: 'La Paz, Bolivia', status: 'active', url: JOIN, map: [310.7, 408.7] },
+  { name: 'São Paulo', city: 'São Paulo, Brazil', status: 'active', url: JOIN, map: [370.5, 445.5] },
+  { name: 'Buenos Aires', city: 'Buenos Aires, Argentina', status: 'active', url: JOIN, map: [337.8, 499.1] },
+
+  // ── Africa ──
+  { name: 'Lagos', city: 'Lagos, Nigeria', status: 'soon', url: JOIN, map: [509.4, 282.2] },
+
+  // ── Asia ──
+  { name: 'Hong Kong', city: 'Hong Kong', status: 'active', url: JOIN, map: [817.1, 197.4] },
+  { name: 'Tokyo', city: 'Tokyo, Japan', status: 'active', url: JOIN, map: [887.9, 132.7] },
+  { name: 'Shanghai', city: 'Shanghai, China', status: 'soon', url: JOIN, map: [837.4, 153.3] },
+
+  // ── NeuroTechX India ──
+  { name: 'NeuroTechX India · Bangalore', city: 'Bangalore, India', status: 'active', url: JOIN, map: [715.5, 246.9] },
+  { name: 'NeuroTechX India · Kolkata', city: 'Kolkata, India', status: 'active', url: JOIN, map: [745.4, 196.1] },
+  { name: 'NeuroTechX India · Mumbai', city: 'Mumbai, India', status: 'active', url: JOIN, map: [702.4, 214.3] },
 ];
 
 // Student clubs that organized / competed in Global NeuroHack 2026.
@@ -111,5 +129,16 @@ export const OTHER_CHAPTERS = CHAPTERS.filter((c) => !c.featured);
 export const STATUS_LABEL: Record<ChapterStatus, string> = {
   active: 'Active',
   restarting: 'Restarting',
+  soon: 'Coming soon',
+  inactive: 'Inactive',
   new: 'New',
+};
+
+// Pin / badge colors per status (shared by the map, legend, and cards).
+export const STATUS_COLOR: Record<ChapterStatus, string> = {
+  active: 'var(--neuro-accent)',
+  restarting: '#fbbf24',
+  soon: '#4ade80',
+  inactive: '#6b7280',
+  new: '#4ade80',
 };
