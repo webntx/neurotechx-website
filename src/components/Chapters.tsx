@@ -84,7 +84,7 @@ export default function Chapters() {
       <div className="mt-12">
         <h3 className="mb-1 text-sm font-semibold uppercase tracking-wider text-muted-foreground">Student clubs</h3>
         <p className="mb-4 max-w-2xl text-sm text-muted-foreground">
-          University clubs that organized and competed in{' '}
+          University neurotech clubs in the NeuroTechX network — many organized and competed in{' '}
           <a href="https://global-neurohack.github.io/" target="_blank" rel="noopener noreferrer" className="font-medium text-neuro-accent hover:underline">
             Global NeuroHack 2026
           </a>

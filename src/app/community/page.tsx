@@ -95,6 +95,7 @@ export default function CommunityPage() {
                         <a href="https://www.instagram.com/neurotechx" target="_blank" className="flex items-center gap-2 hover:text-neuro-accent font-medium">Instagram</a>
                         <a href="https://www.facebook.com/neurotechx" target="_blank" className="flex items-center gap-2 hover:text-neuro-accent font-medium">Facebook</a>
                         <a href="https://www.tiktok.com/@neurotechx" target="_blank" className="flex items-center gap-2 hover:text-neuro-accent font-medium">TikTok</a>
+                        <a href="https://huggingface.co/NeuroTechX" target="_blank" className="flex items-center gap-2 hover:text-neuro-accent font-medium">Hugging Face</a>
                     </div>
                 </div>
 

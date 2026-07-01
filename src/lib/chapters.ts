@@ -100,6 +100,7 @@ export const STUDENT_CLUBS: StudentClub[] = [
   { name: 'McGill NeuroTech', school: 'McGill University', country: 'Canada', url: 'https://www.facebook.com/McGillNeurotech', map: [295.6, 91.3] },
   { name: 'JHU BCI Society', school: 'Johns Hopkins University', country: 'USA', url: 'https://jhu.campusgroups.com/jhubcis/home/', map: [287.2, 116.7] },
   { name: 'Penn Neurotech', school: 'University of Pennsylvania', country: 'USA', map: [291.1, 113.9] },
+  { name: 'Neurotech X Columbia', school: 'Columbia University', country: 'USA', url: 'https://neurotech-x-columbia.github.io/', map: [294.5, 110.3] },
   { name: 'Longhorn Neurotech', school: 'UT Austin', country: 'USA', url: 'https://lhneurotech.com/', map: [228.5, 157.9] },
   { name: 'Imperial College Neurotech', school: 'Imperial College London', country: 'UK', map: [499.5, 69.2] },
 ];
