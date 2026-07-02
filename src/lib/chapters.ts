@@ -121,6 +121,7 @@ export const STUDENT_CLUBS: StudentClub[] = [
   { name: 'Neurotech X Columbia', school: 'Columbia University', country: 'USA', url: 'https://neurotech-x-columbia.github.io/', map: [294.5, 110.3] },
   { name: 'Longhorn Neurotech', school: 'UT Austin', country: 'USA', url: 'https://lhneurotech.com/', map: [228.5, 157.9] },
   { name: 'Imperial College Neurotech', school: 'Imperial College London', country: 'UK', map: [499.5, 69.2] },
+  { name: 'Neurotech UCB', school: 'Universidad Católica Boliviana', country: 'Bolivia', url: 'https://ntxucb.github.io/', map: [310.7, 408.7] },
 ];
 
 export const FEATURED_CHAPTERS = CHAPTERS.filter((c) => c.featured);
