@@ -90,9 +90,9 @@ export const CHAPTERS: Chapter[] = [
   { name: 'Hamilton', city: 'Hamilton', status: 'active', url: 'https://ha.neurotechx.com', map: [278.1, 100.2] },
 
   // ── Latin America ──
-  { name: 'La Paz', city: 'La Paz, Bolivia', status: 'active', url: JOIN, map: [310.7, 408.7] },
-  { name: 'São Paulo', city: 'São Paulo, Brazil', status: 'active', url: JOIN, map: [370.5, 445.5] },
-  { name: 'Buenos Aires', city: 'Buenos Aires, Argentina', status: 'active', url: JOIN, map: [337.8, 499.1] },
+  { name: 'La Paz', city: 'La Paz, Bolivia', status: 'active', url: 'https://www.instagram.com/neurotechxbolivia/', map: [310.7, 408.7] },
+  { name: 'São Paulo', city: 'São Paulo, Brazil', status: 'active', url: 'https://www.instagram.com/ntxbrazil/', map: [370.5, 445.5] },
+  { name: 'Buenos Aires', city: 'Buenos Aires, Argentina', status: 'active', url: 'https://x.com/neurotechba', map: [337.8, 499.1] },
 
   // ── Africa ──
   { name: 'Lagos', city: 'Lagos, Nigeria', status: 'soon', url: JOIN, map: [509.4, 282.2] },
