@@ -106,6 +106,7 @@ export const CHAPTERS: Chapter[] = [
   { name: 'NeuroTechX India · Bangalore', city: 'Bangalore, India', status: 'active', url: JOIN, map: [715.5, 246.9] },
   { name: 'NeuroTechX India · Kolkata', city: 'Kolkata, India', status: 'active', url: JOIN, map: [745.4, 196.1] },
   { name: 'NeuroTechX India · Mumbai', city: 'Mumbai, India', status: 'active', url: JOIN, map: [702.4, 214.3] },
+  { name: 'NeuroTechX India · Chennai', city: 'Chennai, India', status: 'inactive', url: JOIN, map: [723, 246.3] },
 
   // ── Australia (historical) ──
   { name: 'NeuroTechX Sydney', city: 'Sydney, Australia', status: 'inactive', url: JOIN, map: [920, 495.7] },
