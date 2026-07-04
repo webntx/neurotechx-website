@@ -74,6 +74,11 @@ export const EVENTS: NtxEvent[] = [
     desc: "Society for Neuroscience 56th annual meeting — the world's largest neuroscience gathering.",
   },
   {
+    name: 'Brain Innovation Days 2026', tag: 'Conference', dateLabel: 'Nov 18–19, 2026', end: '2026-11-19',
+    location: 'Area 42, Brussels, Belgium', url: 'https://www.braininnovationdays.eu/',
+    desc: "The 6th edition of Europe's brain-innovation summit — startups, investors, researchers & clinicians across the brain ecosystem.",
+  },
+  {
     name: 'NeurIPS 2026', tag: 'Conference', dateLabel: 'Dec 6–12, 2026', end: '2026-12-12',
     location: 'Sydney, Australia', url: 'https://neurips.cc/Conferences/2026/',
     desc: 'Flagship machine learning & computational neuroscience conference (satellites in Paris & Atlanta).',
